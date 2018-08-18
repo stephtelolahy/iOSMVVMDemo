@@ -24,7 +24,6 @@ class PhotoListViewController: UITableViewController {
         super.viewDidLoad()
         
         viewModel = PhotoListViewModel(dataManager: AppModule.sharedDataManager)
-        
         observeViewData()
     }
     
@@ -45,6 +44,13 @@ class PhotoListViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - TableView delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        viewModel?.onPhotoSelected(photos[indexPath.row])
+    }
+    
     // MARK: - Binding
     
     private func observeViewData() {
@@ -60,17 +66,22 @@ class PhotoListViewController: UITableViewController {
                 MBProgressHUD.hide(for: self.view, animated: true)
             }
         }).disposed(by: disposeBag)
+        
+        viewModel?.toDetailSubject.subscribe(onNext: { photo in
+            self.performSegue(withIdentifier: "toDetail", sender: photo)
+        }).disposed(by: disposeBag)
     }
     
     
     // MARK: - Navigation
     
-    /*
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if let detailsViewController = segue.destination as? PhotoDetailViewController,
+            let photo = sender as? Photo {
+            detailsViewController.photo = photo
+        }
+    }
 }

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +17,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nLm-69-zJD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="224" id="0jU-Tn-dn4" customClass="PhotoCell" customModule="iOSMVVMDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="224"/>
@@ -61,10 +62,42 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="All Photos" id="Bdc-Uo-W2a"/>
+                    <connections>
+                        <segue destination="oOv-FX-N5n" kind="show" identifier="toDetail" id="hIE-IZ-Dk7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39e-X5-4en" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="480.80000000000001" y="75.112443778110944"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="ADJ-PP-K9k">
+            <objects>
+                <viewController id="oOv-FX-N5n" customClass="PhotoDetailViewController" customModule="iOSMVVMDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KpY-o4-cAY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ex4-e5-FYv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sfe-1U-XSq" firstAttribute="trailing" secondItem="Ex4-e5-FYv" secondAttribute="trailing" id="Dhz-Ac-Tju"/>
+                            <constraint firstItem="Ex4-e5-FYv" firstAttribute="leading" secondItem="sfe-1U-XSq" secondAttribute="leading" id="cBU-so-wSX"/>
+                            <constraint firstItem="sfe-1U-XSq" firstAttribute="bottom" secondItem="Ex4-e5-FYv" secondAttribute="bottom" id="fU2-8U-qFy"/>
+                            <constraint firstItem="Ex4-e5-FYv" firstAttribute="top" secondItem="sfe-1U-XSq" secondAttribute="top" id="wcE-wr-LUI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sfe-1U-XSq"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="Ex4-e5-FYv" id="ePI-i6-YWb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhV-Zg-70s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1300" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O3n-Ms-d90">

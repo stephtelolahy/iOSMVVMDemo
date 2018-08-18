@@ -19,6 +19,7 @@
 		AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4BED2128506D0073EE2E /* AppDelegate.swift */; };
 		AD6E4BF52128506D0073EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6E4BF42128506D0073EE2E /* Assets.xcassets */; };
 		AD6E4C032128506E0073EE2E /* iOSMVVMDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4C022128506E0073EE2E /* iOSMVVMDemoTests.swift */; };
+		AD7EA2EB2128BFE30055E14F /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2EA2128BFE30055E14F /* PhotoDetailViewController.swift */; };
 		C5123FB26453E15679274D1F /* Pods_iOSMVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */; };
 		DA2656EF4962A92C3F1053EC /* Pods_iOSMVVMDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25356394C8DEF973281ACA /* Pods_iOSMVVMDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		AD6E4C022128506E0073EE2E /* iOSMVVMDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSMVVMDemoTests.swift; sourceTree = "<group>"; };
 		AD6E4C042128506E0073EE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7EA2E62128BB8C0055E14F /* iOSMVVMDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSMVVMDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		AD7EA2EA2128BFE30055E14F /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSMVVMDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AD426DE721285EAF00FDB4CD /* photoList */,
+				AD7EA2E92128BFC20055E14F /* photoDetail */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -194,6 +197,14 @@
 				AD6E4C042128506E0073EE2E /* Info.plist */,
 			);
 			path = iOSMVVMDemoTests;
+			sourceTree = "<group>";
+		};
+		AD7EA2E92128BFC20055E14F /* photoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AD7EA2EA2128BFE30055E14F /* PhotoDetailViewController.swift */,
+			);
+			path = photoDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +385,7 @@
 				AD0BCF6A2128662D0027C7B9 /* PhotoListViewModel.swift in Sources */,
 				AD0BCF68212865D20027C7B9 /* PhotoCell.swift in Sources */,
 				AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */,
+				AD7EA2EB2128BFE30055E14F /* PhotoDetailViewController.swift in Sources */,
 				AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */,
 				AD426DE921285EC800FDB4CD /* PhotoListViewController.swift in Sources */,
 			);

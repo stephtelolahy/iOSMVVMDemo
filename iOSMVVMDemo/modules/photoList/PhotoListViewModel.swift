@@ -15,6 +15,7 @@ class PhotoListViewModel {
     
     let photosSubject = PublishSubject<[Photo]>()
     let loadingSubject = PublishSubject<Bool>()
+    let toDetailSubject = PublishSubject<Photo>()
     
     init(dataManager: IDataManager) {
         self.dataManager = dataManager
@@ -30,6 +31,10 @@ class PhotoListViewModel {
             self.loadingSubject.onNext(false)
             print("onError \(error)")
         }).disposed(by: disposeBag)
+    }
+    
+    func onPhotoSelected(_ photo: Photo) {
+        toDetailSubject.onNext(photo)
     }
     
 }
