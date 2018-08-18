@@ -8,15 +8,17 @@
 
 import RxSwift
 
-protocol IDataManager {
+protocol IDataManager: class {
     func fetchPhotos() -> Observable<[Photo]>
 }
 
 class DataManager: IDataManager {
     
+    static let shared = DataManager()
+    
     func fetchPhotos() -> Observable<[Photo]> {
         return Observable.just([Photo.sample(), Photo.sample()])
-            .delay(5, scheduler: MainScheduler.instance)
+            .delay(2, scheduler: MainScheduler.instance)
     }
 }
 
