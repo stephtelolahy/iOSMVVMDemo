@@ -14,21 +14,23 @@ class PhotoListViewController: UITableViewController {
     
     // MARK: - Fields
     
+    private lazy var viewModel: PhotoListViewModel = {
+        return PhotoListViewModel(dataManager: AppModule.sharedDataManager)
+    }()
+    
     private var photos: [Photo] = []
-    private var viewModel: PhotoListViewModel?
     private let disposeBag = DisposeBag()
     
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = PhotoListViewModel(dataManager: AppModule.sharedDataManager)
         observeViewData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel?.onViewWillAppear()
+        viewModel.onViewWillAppear()
     }
     
     // MARK: - Table view data source
@@ -47,18 +49,18 @@ class PhotoListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        viewModel?.onPhotoSelected(photos[indexPath.row])
+        viewModel.onPhotoSelected(photos[indexPath.row])
     }
     
-    // MARK: - Binding
+    // MARK: - Setup ViewModel
     
     private func observeViewData() {
-        viewModel?.photosSubject.subscribe(onNext: { photos in
+        viewModel.photosSubject.subscribe(onNext: { photos in
             self.photos = photos
             self.tableView.reloadData()
         }).disposed(by: disposeBag)
         
-        viewModel?.loadingSubject.subscribe(onNext: { loading in
+        viewModel.loadingSubject.subscribe(onNext: { loading in
             if (loading) {
                 MBProgressHUD.showAdded(to: self.view, animated: true)
             } else {
@@ -66,11 +68,11 @@ class PhotoListViewController: UITableViewController {
             }
         }).disposed(by: disposeBag)
         
-        viewModel?.errorSubject.subscribe(onNext: { error in
+        viewModel.errorSubject.subscribe(onNext: { error in
             self.showAlert(withMessage: error.localizedDescription)
         }).disposed(by: disposeBag)
         
-        viewModel?.toDetailSubject.subscribe(onNext: { photo in
+        viewModel.toDetailSubject.subscribe(onNext: { photo in
             self.performSegue(withIdentifier: "toDetail", sender: photo)
         }).disposed(by: disposeBag)
     }

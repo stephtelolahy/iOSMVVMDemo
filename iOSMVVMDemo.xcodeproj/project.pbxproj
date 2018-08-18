@@ -141,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				AD426DE821285EC800FDB4CD /* PhotoListViewController.swift */,
-				AD0BCF67212865D20027C7B9 /* PhotoCell.swift */,
 				AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */,
+				AD0BCF67212865D20027C7B9 /* PhotoCell.swift */,
 			);
 			path = photoList;
 			sourceTree = "<group>";

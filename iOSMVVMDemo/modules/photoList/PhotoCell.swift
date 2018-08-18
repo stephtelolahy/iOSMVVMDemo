@@ -16,7 +16,7 @@ class PhotoCell: UITableViewCell {
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    // MARK: - Binding
+    // MARK: - Setup
     
     func confgure(withPhoto photo: Photo) {
         descriptionLabel.text = photo.author
