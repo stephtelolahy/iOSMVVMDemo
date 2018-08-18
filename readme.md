@@ -6,14 +6,16 @@ A basic iOS project aimed to be easy to maintain
 
 ### Done
 * MVVM pattern with RXSwift
+* Dependency injection pattern
 * API Service with Alamofire+Codable
+* Unit test viewModel with manual mocking
 
 ### TODO
-* MVVM pattern with propety setter
-* Unit test business layer
-* Unit test ViewModel
-* Swift lint
-* Dependency injection
+* MVVM pattern using property setter + closure (maybe cleaner)
+* APIService implementation using local resource
+* Unit test network layer (Quick, Nimble)
+* Swift lint (prevent force unwrap)
+* Save preferred photos -> Home: [All][Starred]
 
 ### References
 * [Lorem Picsum free photo API](https://picsum.photos)

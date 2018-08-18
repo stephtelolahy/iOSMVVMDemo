@@ -32,7 +32,9 @@ private extension Alamofire.SessionManager {
                 .validate()
                 .responseData(completionHandler: { (dataResponse) in
                     do {
-                        let model = try JSONDecoder().decode(T.self, from: dataResponse.data!)
+                        let decoder = JSONDecoder()
+                        decoder.dateDecodingStrategy = .iso8601
+                        let model = try decoder.decode(T.self, from: dataResponse.data!)
                         observer.onNext(model)
                         observer.onCompleted()
                     } catch let error {
