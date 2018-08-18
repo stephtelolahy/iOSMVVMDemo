@@ -22,7 +22,7 @@ class PhotoListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = PhotoListViewModel(dataManager: DataManager.shared)
+        viewModel = PhotoListViewModel(dataManager: AppModule.sharedDataManager)
         
         viewModel?.photosSubject.subscribe(onNext: { photos in
             self.photos = photos

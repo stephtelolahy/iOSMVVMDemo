@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AD0BCF68212865D20027C7B9 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF67212865D20027C7B9 /* PhotoCell.swift */; };
 		AD0BCF6A2128662D0027C7B9 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */; };
+		AD0BCF6D212870C50027C7B9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6C212870C50027C7B9 /* APIService.swift */; };
+		AD0BCF6F2128738F0027C7B9 /* AppModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6E2128738F0027C7B9 /* AppModule.swift */; };
 		AD426DE521285E1100FDB4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD426DE121285E1100FDB4CD /* LaunchScreen.storyboard */; };
 		AD426DE621285E1100FDB4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD426DE321285E1100FDB4CD /* Main.storyboard */; };
 		AD426DE921285EC800FDB4CD /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DE821285EC800FDB4CD /* PhotoListViewController.swift */; };
@@ -39,6 +41,8 @@
 		96A9CC27D03258D30FFE6E4E /* Pods-iOSMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AD0BCF67212865D20027C7B9 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		AD0BCF6C212870C50027C7B9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		AD0BCF6E2128738F0027C7B9 /* AppModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModule.swift; sourceTree = "<group>"; };
 		AD426DE221285E1100FDB4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD426DE421285E1100FDB4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD426DE821285EC800FDB4CD /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AD0BCF6B212870B30027C7B9 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				AD0BCF6C212870C50027C7B9 /* APIService.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
 		AD1AB4204AE91203D1EC414D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				AD6E4BED2128506D0073EE2E /* AppDelegate.swift */,
+				AD0BCF6E2128738F0027C7B9 /* AppModule.swift */,
 			);
 			path = application;
 			sourceTree = "<group>";
@@ -114,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				AD426DEA21285FAE00FDB4CD /* model */,
+				AD0BCF6B212870B30027C7B9 /* api */,
 				AD426DED2128608A00FDB4CD /* DataManager.swift */,
 			);
 			path = data;
@@ -350,6 +364,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD426DEC21285FC200FDB4CD /* Photo.swift in Sources */,
+				AD0BCF6F2128738F0027C7B9 /* AppModule.swift in Sources */,
+				AD0BCF6D212870C50027C7B9 /* APIService.swift in Sources */,
 				AD0BCF6A2128662D0027C7B9 /* PhotoListViewModel.swift in Sources */,
 				AD0BCF68212865D20027C7B9 /* PhotoCell.swift in Sources */,
 				AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */,

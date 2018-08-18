@@ -14,24 +14,16 @@ protocol IDataManager: class {
 
 class DataManager: IDataManager {
     
-    static let shared = DataManager()
+    private let apiService: APIService
+    
+    init(apiService: APIService) {
+        self.apiService = apiService
+    }
     
     func fetchPhotos() -> Observable<[Photo]> {
-        return Observable.just([Photo.sample(), Photo.sample()])
-            .delay(2, scheduler: MainScheduler.instance)
+        return apiService.fetchPhotos()
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .observeOn(MainScheduler.instance)
     }
-}
-
-private extension Photo {
     
-    static func sample() -> Photo {
-        return Photo(id: 144,
-                     format: "jpeg",
-                     width: 4912,
-                     height: 2760,
-                     filename: "0144_TuOiIpkIea8.jpeg",
-                     author: "Mouly Kumar",
-                     author_url: "https://unsplash.com/@moulykumar",
-                     post_url: "https://unsplash.com/photos/TuOiIpkIea8")
-    }
 }
