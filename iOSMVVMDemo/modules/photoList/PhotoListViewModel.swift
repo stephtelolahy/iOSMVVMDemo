@@ -15,6 +15,7 @@ class PhotoListViewModel {
     
     let photosSubject = PublishSubject<[Photo]>()
     let loadingSubject = PublishSubject<Bool>()
+    let errorSubject = PublishSubject<Error>()
     let toDetailSubject = PublishSubject<Photo>()
     
     init(dataManager: IDataManager) {
@@ -29,7 +30,7 @@ class PhotoListViewModel {
                 self.photosSubject.onNext(photos)
         }, onError: { error in
             self.loadingSubject.onNext(false)
-            print("onError \(error)")
+            self.errorSubject.onNext(error)
         }).disposed(by: disposeBag)
     }
     

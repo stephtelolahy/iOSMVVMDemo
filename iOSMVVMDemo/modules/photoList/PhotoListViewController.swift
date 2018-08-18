@@ -22,7 +22,6 @@ class PhotoListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewModel = PhotoListViewModel(dataManager: AppModule.sharedDataManager)
         observeViewData()
     }
@@ -67,6 +66,10 @@ class PhotoListViewController: UITableViewController {
             }
         }).disposed(by: disposeBag)
         
+        viewModel?.errorSubject.subscribe(onNext: { error in
+            self.showAlert(withMessage: error.localizedDescription)
+        }).disposed(by: disposeBag)
+        
         viewModel?.toDetailSubject.subscribe(onNext: { photo in
             self.performSegue(withIdentifier: "toDetail", sender: photo)
         }).disposed(by: disposeBag)
@@ -83,5 +86,14 @@ class PhotoListViewController: UITableViewController {
             let photo = sender as? Photo {
             detailsViewController.photo = photo
         }
+    }
+}
+
+extension UIViewController {
+    
+    func showAlert(withMessage message: String ) {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
