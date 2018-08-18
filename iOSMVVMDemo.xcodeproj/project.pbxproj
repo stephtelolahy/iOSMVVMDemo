@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD426DE521285E1100FDB4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD426DE121285E1100FDB4CD /* LaunchScreen.storyboard */; };
+		AD426DE621285E1100FDB4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD426DE321285E1100FDB4CD /* Main.storyboard */; };
+		AD426DE921285EC800FDB4CD /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DE821285EC800FDB4CD /* PhotoListViewController.swift */; };
 		AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4BED2128506D0073EE2E /* AppDelegate.swift */; };
-		AD6E4BF02128506D0073EE2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4BEF2128506D0073EE2E /* ViewController.swift */; };
-		AD6E4BF32128506D0073EE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6E4BF12128506D0073EE2E /* Main.storyboard */; };
 		AD6E4BF52128506D0073EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6E4BF42128506D0073EE2E /* Assets.xcassets */; };
-		AD6E4BF82128506D0073EE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6E4BF62128506D0073EE2E /* LaunchScreen.storyboard */; };
 		AD6E4C032128506E0073EE2E /* iOSMVVMDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4C022128506E0073EE2E /* iOSMVVMDemoTests.swift */; };
 		C5123FB26453E15679274D1F /* Pods_iOSMVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */; };
 		DA2656EF4962A92C3F1053EC /* Pods_iOSMVVMDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25356394C8DEF973281ACA /* Pods_iOSMVVMDemoTests.framework */; };
@@ -33,12 +33,12 @@
 		89F041AC4A9BEE52D511EE27 /* Pods-iOSMVVMDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemoTests/Pods-iOSMVVMDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A25356394C8DEF973281ACA /* Pods_iOSMVVMDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSMVVMDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96A9CC27D03258D30FFE6E4E /* Pods-iOSMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		AD426DE221285E1100FDB4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD426DE421285E1100FDB4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AD426DE821285EC800FDB4CD /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
 		AD6E4BEA2128506D0073EE2E /* iOSMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6E4BED2128506D0073EE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AD6E4BEF2128506D0073EE2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD6E4BF22128506D0073EE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD6E4BF42128506D0073EE2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AD6E4BF72128506D0073EE2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD6E4BF92128506D0073EE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD6E4BFE2128506E0073EE2E /* iOSMVVMDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMVVMDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6E4C022128506E0073EE2E /* iOSMVVMDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSMVVMDemoTests.swift; sourceTree = "<group>"; };
@@ -86,6 +86,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD426DDE21285D6B00FDB4CD /* application */ = {
+			isa = PBXGroup;
+			children = (
+				AD6E4BED2128506D0073EE2E /* AppDelegate.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		AD426DDF21285D8F00FDB4CD /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				AD426DE721285EAF00FDB4CD /* photoList */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		AD426DE021285DA600FDB4CD /* data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		AD426DE721285EAF00FDB4CD /* photoList */ = {
+			isa = PBXGroup;
+			children = (
+				AD426DE821285EC800FDB4CD /* PhotoListViewController.swift */,
+			);
+			path = photoList;
+			sourceTree = "<group>";
+		};
 		AD6E4BE12128506D0073EE2E = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +140,13 @@
 		AD6E4BEC2128506D0073EE2E /* iOSMVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AD6E4BED2128506D0073EE2E /* AppDelegate.swift */,
-				AD6E4BEF2128506D0073EE2E /* ViewController.swift */,
-				AD6E4BF12128506D0073EE2E /* Main.storyboard */,
-				AD6E4BF42128506D0073EE2E /* Assets.xcassets */,
-				AD6E4BF62128506D0073EE2E /* LaunchScreen.storyboard */,
+				AD426DDE21285D6B00FDB4CD /* application */,
+				AD426DE021285DA600FDB4CD /* data */,
+				AD426DDF21285D8F00FDB4CD /* modules */,
+				AD426DE121285E1100FDB4CD /* LaunchScreen.storyboard */,
+				AD426DE321285E1100FDB4CD /* Main.storyboard */,
 				AD6E4BF92128506D0073EE2E /* Info.plist */,
+				AD6E4BF42128506D0073EE2E /* Assets.xcassets */,
 			);
 			path = iOSMVVMDemo;
 			sourceTree = "<group>";
@@ -180,7 +212,7 @@
 				TargetAttributes = {
 					AD6E4BE92128506D0073EE2E = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					AD6E4BFD2128506E0073EE2E = {
 						CreatedOnToolsVersion = 9.2;
@@ -213,9 +245,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD6E4BF82128506D0073EE2E /* LaunchScreen.storyboard in Resources */,
+				AD426DE621285E1100FDB4CD /* Main.storyboard in Resources */,
 				AD6E4BF52128506D0073EE2E /* Assets.xcassets in Resources */,
-				AD6E4BF32128506D0073EE2E /* Main.storyboard in Resources */,
+				AD426DE521285E1100FDB4CD /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD6E4BF02128506D0073EE2E /* ViewController.swift in Sources */,
 				AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */,
+				AD426DE921285EC800FDB4CD /* PhotoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,20 +328,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AD6E4BF12128506D0073EE2E /* Main.storyboard */ = {
+		AD426DE121285E1100FDB4CD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AD6E4BF22128506D0073EE2E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AD6E4BF62128506D0073EE2E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD6E4BF72128506D0073EE2E /* Base */,
+				AD426DE221285E1100FDB4CD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AD426DE321285E1100FDB4CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD426DE421285E1100FDB4CD /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -427,11 +459,13 @@
 			baseConfigurationReference = 96A9CC27D03258D30FFE6E4E /* Pods-iOSMVVMDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iOSMVVMDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativegames.iOSMVVMDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,11 +476,13 @@
 			baseConfigurationReference = 060EDFDA88F46AF5CAB617F4 /* Pods-iOSMVVMDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = iOSMVVMDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.creativegames.iOSMVVMDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
