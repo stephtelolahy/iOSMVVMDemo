@@ -6,6 +6,7 @@
 //  Copyright © 2018 Hugues Stéphano TELOLAHY. All rights reserved.
 //
 
+// Application dependencies
 class AppModule {
 
     static let sharedApiService = AlamofireAPIService()

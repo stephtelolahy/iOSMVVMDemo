@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import MBProgressHUD
 
 class PhotoListViewController: UITableViewController {
     
@@ -24,10 +25,7 @@ class PhotoListViewController: UITableViewController {
         
         viewModel = PhotoListViewModel(dataManager: AppModule.sharedDataManager)
         
-        viewModel?.photosSubject.subscribe(onNext: { photos in
-            self.photos = photos
-            self.tableView.reloadData()
-        }).disposed(by: disposeBag)
+        observeViewData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,6 +44,24 @@ class PhotoListViewController: UITableViewController {
         cell.confgure(withPhoto: photos[indexPath.row])
         return cell
     }
+    
+    // MARK: - Binding
+    
+    private func observeViewData() {
+        viewModel?.photosSubject.subscribe(onNext: { photos in
+            self.photos = photos
+            self.tableView.reloadData()
+        }).disposed(by: disposeBag)
+        
+        viewModel?.loadingSubject.subscribe(onNext: { loading in
+            if (loading) {
+                MBProgressHUD.showAdded(to: self.view, animated: true)
+            } else {
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
+        }).disposed(by: disposeBag)
+    }
+    
     
     // MARK: - Navigation
     

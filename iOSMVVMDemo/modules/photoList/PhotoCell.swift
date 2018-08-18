@@ -7,10 +7,20 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PhotoCell: UITableViewCell {
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    // MARK: - Binding
 
     func confgure(withPhoto photo: Photo) {
-        self.textLabel?.text = photo.filename
+        descriptionLabel.text = photo.author
+        let imageUrl = "https://picsum.photos/200/300?image=\(photo.id)"
+        photoImageView.kf.setImage(with: URL(string: imageUrl))
     }
 }

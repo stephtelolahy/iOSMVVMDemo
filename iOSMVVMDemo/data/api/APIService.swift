@@ -22,6 +22,7 @@ class AlamofireAPIService: APIService {
     }
 }
 
+// MARK: - Alamofire + Codable + Observable
 private extension Alamofire.SessionManager {
     
     func get<T: Codable>(_ class: T.Type, from url: String) -> Observable<T> {

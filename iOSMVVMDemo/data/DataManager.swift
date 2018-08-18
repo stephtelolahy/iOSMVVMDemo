@@ -14,11 +14,15 @@ protocol IDataManager: class {
 
 class DataManager: IDataManager {
     
+    // MARK: - Dependencies
+    
     private let apiService: APIService
     
     init(apiService: APIService) {
         self.apiService = apiService
     }
+    
+    // MARK: - IDataManager
     
     func fetchPhotos() -> Observable<[Photo]> {
         return apiService.fetchPhotos()

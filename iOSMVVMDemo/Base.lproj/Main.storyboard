@@ -13,18 +13,46 @@
         <scene sceneID="ktr-MA-3mu">
             <objects>
                 <tableViewController id="eQK-tg-ZnW" customClass="PhotoListViewController" customModule="iOSMVVMDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nLm-69-zJD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nLm-69-zJD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" id="0jU-Tn-dn4" customClass="PhotoCell" customModule="iOSMVVMDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoCell" rowHeight="224" id="0jU-Tn-dn4" customClass="PhotoCell" customModule="iOSMVVMDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="224"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0jU-Tn-dn4" id="m7k-az-6Zg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="224"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k6B-4D-84C">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="220" id="SIN-PQ-cE5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBM-mX-Q11">
+                                            <rect key="frame" x="0.0" y="194.5" width="375" height="29"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.3516160102739726" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="HBM-mX-Q11" secondAttribute="bottom" id="9UK-F3-e6A"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="k6B-4D-84C" secondAttribute="bottom" id="ENO-Wh-ET6"/>
+                                        <constraint firstItem="k6B-4D-84C" firstAttribute="leading" secondItem="m7k-az-6Zg" secondAttribute="leading" id="Kcz-JC-uzr"/>
+                                        <constraint firstAttribute="trailing" secondItem="HBM-mX-Q11" secondAttribute="trailing" id="Rt6-Ud-qWA"/>
+                                        <constraint firstAttribute="trailing" secondItem="k6B-4D-84C" secondAttribute="trailing" id="Uld-w7-9gq"/>
+                                        <constraint firstItem="k6B-4D-84C" firstAttribute="top" secondItem="m7k-az-6Zg" secondAttribute="top" id="moO-jI-mVK"/>
+                                        <constraint firstItem="HBM-mX-Q11" firstAttribute="leading" secondItem="m7k-az-6Zg" secondAttribute="leading" id="mqm-et-ggZ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="HBM-mX-Q11" id="S1P-Ee-Nn3"/>
+                                    <outlet property="photoImageView" destination="k6B-4D-84C" id="3es-Xi-GMF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -36,7 +64,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="39e-X5-4en" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="481" y="76"/>
+            <point key="canvasLocation" x="480.80000000000001" y="75.112443778110944"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O3n-Ms-d90">
