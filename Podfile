@@ -6,6 +6,10 @@ target 'iOSMVVMDemo' do
   use_frameworks!
 
   # Pods for iOSMVVMDemo
+  pod 'Alamofire'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Kingfisher'
 
   target 'iOSMVVMDemoTests' do
     inherit! :search_paths

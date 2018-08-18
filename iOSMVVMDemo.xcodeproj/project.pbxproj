@@ -10,6 +10,8 @@
 		AD426DE521285E1100FDB4CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD426DE121285E1100FDB4CD /* LaunchScreen.storyboard */; };
 		AD426DE621285E1100FDB4CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD426DE321285E1100FDB4CD /* Main.storyboard */; };
 		AD426DE921285EC800FDB4CD /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DE821285EC800FDB4CD /* PhotoListViewController.swift */; };
+		AD426DEC21285FC200FDB4CD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DEB21285FC200FDB4CD /* Photo.swift */; };
+		AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
 		AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4BED2128506D0073EE2E /* AppDelegate.swift */; };
 		AD6E4BF52128506D0073EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6E4BF42128506D0073EE2E /* Assets.xcassets */; };
 		AD6E4C032128506E0073EE2E /* iOSMVVMDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4C022128506E0073EE2E /* iOSMVVMDemoTests.swift */; };
@@ -36,6 +38,8 @@
 		AD426DE221285E1100FDB4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD426DE421285E1100FDB4CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD426DE821285EC800FDB4CD /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		AD426DEB21285FC200FDB4CD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		AD426DED2128608A00FDB4CD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AD6E4BEA2128506D0073EE2E /* iOSMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6E4BED2128506D0073EE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6E4BF42128506D0073EE2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 		AD426DE021285DA600FDB4CD /* data */ = {
 			isa = PBXGroup;
 			children = (
+				AD426DEA21285FAE00FDB4CD /* model */,
+				AD426DED2128608A00FDB4CD /* DataManager.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -115,6 +121,14 @@
 				AD426DE821285EC800FDB4CD /* PhotoListViewController.swift */,
 			);
 			path = photoList;
+			sourceTree = "<group>";
+		};
+		AD426DEA21285FAE00FDB4CD /* model */ = {
+			isa = PBXGroup;
+			children = (
+				AD426DEB21285FC200FDB4CD /* Photo.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		AD6E4BE12128506D0073EE2E = {
@@ -171,6 +185,7 @@
 				AD6E4BE62128506D0073EE2E /* Sources */,
 				AD6E4BE72128506D0073EE2E /* Frameworks */,
 				AD6E4BE82128506D0073EE2E /* Resources */,
+				78FE507F311F08ECD0EC2FE2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +312,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		78FE507F311F08ECD0EC2FE2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -304,6 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD426DEC21285FC200FDB4CD /* Photo.swift in Sources */,
+				AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */,
 				AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */,
 				AD426DE921285EC800FDB4CD /* PhotoListViewController.swift in Sources */,
 			);
