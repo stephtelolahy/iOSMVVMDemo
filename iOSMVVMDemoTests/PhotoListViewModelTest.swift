@@ -9,23 +9,22 @@
 import XCTest
 import RxSwift
 import Cuckoo
+import RxTest
 
 class PhotoListViewModelTest: XCTestCase {
     
     private var mockDataManager: MockIDataManager!
     private var photoListViewModel: PhotoListViewModel!
     private let disposeBag = DisposeBag()
+    private var photosObserver: TestableObserver<[Photo]>!
     
     override func setUp() {
         super.setUp()
         mockDataManager = MockIDataManager()
         photoListViewModel = PhotoListViewModel(dataManager: mockDataManager)
-    }
-    
-    override func tearDown() {
-        photoListViewModel = nil
-        mockDataManager = nil
-        super.tearDown()
+        let scheduler = TestScheduler(initialClock: 0)
+        photosObserver = scheduler.createObserver([Photo].self)
+        photoListViewModel.photosSubject.subscribe(photosObserver).disposed(by: disposeBag)
     }
     
     func testFetchPhotoWhenViewWillAppear() {
@@ -35,18 +34,13 @@ class PhotoListViewModelTest: XCTestCase {
             mock.fetchPhotos().thenReturn(Observable.just(photos))
         }
         
-        let expect = XCTestExpectation(description: "photos triggered")
-        photoListViewModel.photosSubject.subscribe(onNext: { result in
-            XCTAssertEqual(photos, result)
-            expect.fulfill()
-        }).disposed(by: disposeBag)
-        
         // When
         photoListViewModel.onViewWillAppear()
         
         // Assert
         verify(mockDataManager, times(1)).fetchPhotos()
-        wait(for: [expect], timeout: 1.0)
+        XCTAssertEqual(1, photosObserver.events.count)
+        XCTAssertEqual(photos, photosObserver.events[0].value.element!)
     }
 }
 

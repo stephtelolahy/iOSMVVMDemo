@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: iOSMVVMDemo/data/DataManager.swift at 2018-08-19 17:24:47 +0000
+// MARK: - Mocks generated from file: iOSMVVMDemo/data/DataManager.swift at 2018-08-19 18:01:13 +0000
 
 //
 //  DataManager.swift

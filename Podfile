@@ -16,6 +16,7 @@ target 'iOSMVVMDemo' do
     inherit! :search_paths
     # Pods for testing
     pod 'Cuckoo'
+    pod 'RxTest'
   end
 
 end

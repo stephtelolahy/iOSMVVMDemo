@@ -8,7 +8,7 @@ A basic iOS project aimed to be easy to maintain
 * MVVM pattern with RXSwift
 * Dependency injection pattern
 * API Service with Alamofire+Codable
-* Unit test viewModel with Cuckoo
+* Test viewModel with Cuckoo + RxTest
 
 ### TODO
 * MVVM pattern using property setter + closure (maybe cleaner)
@@ -23,4 +23,4 @@ A basic iOS project aimed to be easy to maintain
 * [RXSwift subjects](https://medium.com/@dkhuong291/rxswift-subjects-part1-publishsubjects-103ff6b06932)
 * [Cuckoo mocking library](https://github.com/Brightify/Cuckoo)
 * [Swift lint](https://github.com/realm/SwiftLint)
-* 
+* [RxTest](https://cocoapods.org/pods/RxTest)
