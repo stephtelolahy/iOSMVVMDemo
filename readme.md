@@ -8,7 +8,7 @@ A basic iOS project aimed to be easy to maintain
 * MVVM pattern with RXSwift
 * Dependency injection pattern
 * API Service with Alamofire+Codable
-* Unit test viewModel with manual mocking
+* Unit test viewModel with Cuckoo
 
 ### TODO
 * MVVM pattern using property setter + closure (maybe cleaner)
@@ -21,3 +21,6 @@ A basic iOS project aimed to be easy to maintain
 * [Lorem Picsum free photo API](https://picsum.photos)
 * [Memory management in RXSwift](http://adamborek.com/memory-managment-rxswift/)
 * [RXSwift subjects](https://medium.com/@dkhuong291/rxswift-subjects-part1-publishsubjects-103ff6b06932)
+* [Cuckoo mocking library](https://github.com/Brightify/Cuckoo)
+* [Swift lint](https://github.com/realm/SwiftLint)
+* 

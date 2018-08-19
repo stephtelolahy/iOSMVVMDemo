@@ -8,16 +8,17 @@
 
 import XCTest
 import RxSwift
+import Cuckoo
 
 class PhotoListViewModelTest: XCTestCase {
     
-    private var mockDataManager: MockDataManager!
+    private var mockDataManager: MockIDataManager!
     private var photoListViewModel: PhotoListViewModel!
     private let disposeBag = DisposeBag()
     
     override func setUp() {
         super.setUp()
-        mockDataManager = MockDataManager()
+        mockDataManager = MockIDataManager()
         photoListViewModel = PhotoListViewModel(dataManager: mockDataManager)
     }
     
@@ -30,7 +31,9 @@ class PhotoListViewModelTest: XCTestCase {
     func testFetchPhotoWhenViewWillAppear() {
         // Given
         let photos = [Photo.sample()]
-        mockDataManager.fetchPhotoResponse = Observable.just(photos)
+        stub(mockDataManager) { mock in
+            mock.fetchPhotos().thenReturn(Observable.just(photos))
+        }
         
         let expect = XCTestExpectation(description: "photos triggered")
         photoListViewModel.photosSubject.subscribe(onNext: { result in
@@ -42,8 +45,7 @@ class PhotoListViewModelTest: XCTestCase {
         photoListViewModel.onViewWillAppear()
         
         // Assert
-        XCTAssert(mockDataManager.isFetchPhotosCalled)
-        
+        verify(mockDataManager, times(1)).fetchPhotos()
         wait(for: [expect], timeout: 1.0)
     }
 }

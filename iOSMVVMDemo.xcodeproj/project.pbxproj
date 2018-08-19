@@ -18,13 +18,13 @@
 		AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
 		AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4BED2128506D0073EE2E /* AppDelegate.swift */; };
 		AD6E4BF52128506D0073EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6E4BF42128506D0073EE2E /* Assets.xcassets */; };
+		AD7239252129DCAC0090154A /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7239242129DCAB0090154A /* GeneratedMocks.swift */; };
 		AD7EA2EB2128BFE30055E14F /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2EA2128BFE30055E14F /* PhotoDetailViewController.swift */; };
 		AD7EA2ED2128D2890055E14F /* PhotoListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */; };
 		AD7EA2EE2128D29F0055E14F /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */; };
 		AD7EA2EF2128D2DC0055E14F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
 		AD7EA2F02128D3240055E14F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6C212870C50027C7B9 /* APIService.swift */; };
 		AD7EA2F12128D3310055E14F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DEB21285FC200FDB4CD /* Photo.swift */; };
-		AD7EA2F32128D5110055E14F /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2F22128D5110055E14F /* MockDataManager.swift */; };
 		C5123FB26453E15679274D1F /* Pods_iOSMVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */; };
 		DA2656EF4962A92C3F1053EC /* Pods_iOSMVVMDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25356394C8DEF973281ACA /* Pods_iOSMVVMDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,10 +60,10 @@
 		AD6E4BF92128506D0073EE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD6E4BFE2128506E0073EE2E /* iOSMVVMDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMVVMDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6E4C042128506E0073EE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7239242129DCAB0090154A /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		AD7EA2E62128BB8C0055E14F /* iOSMVVMDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSMVVMDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD7EA2EA2128BFE30055E14F /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModelTest.swift; sourceTree = "<group>"; };
-		AD7EA2F22128D5110055E14F /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
 		E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSMVVMDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -199,8 +199,8 @@
 		AD6E4C012128506E0073EE2E /* iOSMVVMDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD7239242129DCAB0090154A /* GeneratedMocks.swift */,
 				AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */,
-				AD7EA2F22128D5110055E14F /* MockDataManager.swift */,
 				AD6E4C042128506E0073EE2E /* Info.plist */,
 			);
 			path = iOSMVVMDemoTests;
@@ -244,6 +244,8 @@
 				AD6E4BFA2128506E0073EE2E /* Sources */,
 				AD6E4BFB2128506E0073EE2E /* Frameworks */,
 				AD6E4BFC2128506E0073EE2E /* Resources */,
+				AD1AFBFB2129D54A00C2F51F /* ShellScript */,
+				E0C7CDB67E0BFA9A37F288A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -379,6 +381,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AD1AFBFB2129D54A00C2F51F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Define output file; change \"${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory; change \"${PROJECT_NAME}\" to your project's root source folder, if it's not the default name\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/data/DataManager.swift\"";
+		};
+		E0C7CDB67E0BFA9A37F288A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSMVVMDemoTests/Pods-iOSMVVMDemoTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cuckoo/Cuckoo.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cuckoo.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSMVVMDemoTests/Pods-iOSMVVMDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -403,7 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7EA2ED2128D2890055E14F /* PhotoListViewModelTest.swift in Sources */,
-				AD7EA2F32128D5110055E14F /* MockDataManager.swift in Sources */,
+				AD7239252129DCAC0090154A /* GeneratedMocks.swift in Sources */,
 				AD7EA2EF2128D2DC0055E14F /* DataManager.swift in Sources */,
 				AD7EA2F02128D3240055E14F /* APIService.swift in Sources */,
 				AD7EA2EE2128D29F0055E14F /* PhotoListViewModel.swift in Sources */,
