@@ -14,20 +14,26 @@ import RxTest
 class PhotoListViewModelTest: XCTestCase {
     
     private var mockDataManager: MockIDataManager!
-    private var photoListViewModel: PhotoListViewModel!
+    private var viewModel: PhotoListViewModel!
     private let disposeBag = DisposeBag()
     private var photosObserver: TestableObserver<[Photo]>!
+    private var errorObserver: TestableObserver<Error>!
+    private var loadingObserver: TestableObserver<Bool>!
     
     override func setUp() {
         super.setUp()
         mockDataManager = MockIDataManager()
-        photoListViewModel = PhotoListViewModel(dataManager: mockDataManager)
+        viewModel = PhotoListViewModel(dataManager: mockDataManager)
         let scheduler = TestScheduler(initialClock: 0)
         photosObserver = scheduler.createObserver([Photo].self)
-        photoListViewModel.photosSubject.subscribe(photosObserver).disposed(by: disposeBag)
+        viewModel.photosSubject.subscribe(photosObserver).disposed(by: disposeBag)
+        errorObserver = scheduler.createObserver(Error.self)
+        viewModel.errorSubject.subscribe(errorObserver).disposed(by: disposeBag)
+        loadingObserver = scheduler.createObserver(Bool.self)
+        viewModel.loadingSubject.subscribe(loadingObserver).disposed(by: disposeBag)
     }
     
-    func testFetchPhotoWhenViewWillAppear() {
+    func testFetchPhotoSucceedOnViewWillAppear() {
         // Given
         let photos = [Photo.sample()]
         stub(mockDataManager) { mock in
@@ -35,13 +41,30 @@ class PhotoListViewModelTest: XCTestCase {
         }
         
         // When
-        photoListViewModel.onViewWillAppear()
+        viewModel.onViewWillAppear()
         
         // Assert
         verify(mockDataManager, times(1)).fetchPhotos()
         verifyNoMoreInteractions(mockDataManager)
-        XCTAssertEqual(1, photosObserver.events.count)
-        XCTAssertEqual(photos, photosObserver.events[0].value.element!)
+        XCTAssertEqual([next(0, photos)], photosObserver.events)
+        XCTAssertEqual([next(0, true), next(0, false)], loadingObserver.events)
+    }
+    
+    func testFetchPhotoFailedOnViewWillAppear() {
+        // Given
+        let error: Error = NSError(domain: "Got an error", code: 0)
+        stub(mockDataManager) { mock in
+            when(mock.fetchPhotos()).thenReturn(Observable.error(error))
+        }
+        
+        // When
+        viewModel.onViewWillAppear()
+        
+        // Assert
+        verify(mockDataManager, times(1)).fetchPhotos()
+        XCTAssertEqual(1, errorObserver.events.count)
+        XCTAssertEqual(error.localizedDescription, errorObserver.events[0].value.element!.localizedDescription)
+        XCTAssertEqual([next(0, true), next(0, false)], loadingObserver.events)
     }
 }
 

@@ -3,6 +3,8 @@ PODS:
   - Cuckoo (0.11.3)
   - Kingfisher (4.7.0)
   - MBProgressHUD (1.1.0)
+  - RxBlocking (4.1.2):
+    - RxSwift (~> 4.0)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
@@ -14,6 +16,7 @@ DEPENDENCIES:
   - Cuckoo
   - Kingfisher
   - MBProgressHUD
+  - RxBlocking
   - RxCocoa
   - RxSwift
   - RxTest
@@ -24,6 +27,7 @@ SPEC REPOS:
     - Cuckoo
     - Kingfisher
     - MBProgressHUD
+    - RxBlocking
     - RxCocoa
     - RxSwift
     - RxTest
@@ -33,10 +37,11 @@ SPEC CHECKSUMS:
   Cuckoo: 97522dd7ac6f18adba6022bdc74aa69e82ca691a
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  RxBlocking: f6054985901412fc8c02daa84e92d4ba68c61389
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   RxTest: e634f15fd2c2cd0e0120132ef7a4f7be69ad0393
 
-PODFILE CHECKSUM: fa98db5e565a7e70e97ddfa47095ab8c39492f55
+PODFILE CHECKSUM: 4c9c8831d4e4b1876fafc4bdc3158a2ffbbaace8
 
 COCOAPODS: 1.5.0

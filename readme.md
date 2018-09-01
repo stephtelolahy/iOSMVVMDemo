@@ -11,15 +11,16 @@ A basic iOS project aimed to be easy to maintain
 * ViewModelTest with Cuckoo + RxTest
 
 ### TODO
-* APIService implementation using local resource
+* APIService implementation using local datasource
 * NetworkLayerTest with Quick, Nimble
 * Swift lint (prevent force unwrap)
 * Save preferred photos -> Home: [All][Starred]
 
 ### References
-* [Lorem Picsum free photo API](https://picsum.photos)
+* [Lorem Picsum](https://picsum.photos)
 * [Memory management in RXSwift](http://adamborek.com/memory-managment-rxswift/)
 * [RXSwift subjects](https://medium.com/@dkhuong291/rxswift-subjects-part1-publishsubjects-103ff6b06932)
-* [Cuckoo mocking library](https://github.com/Brightify/Cuckoo)
+* [Cuckoo](https://github.com/Brightify/Cuckoo)
+* [Staying Sane with Cuckoo and Code Generation](http://www.thecodedself.com/cuckoo-and-code-generation/)
 * [Swift lint](https://github.com/realm/SwiftLint)
 * [RxTest](https://cocoapods.org/pods/RxTest)

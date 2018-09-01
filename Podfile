@@ -17,6 +17,7 @@ target 'iOSMVVMDemo' do
     # Pods for testing
     pod 'Cuckoo'
     pod 'RxTest'
+    pod 'RxBlocking'
   end
 
 end
