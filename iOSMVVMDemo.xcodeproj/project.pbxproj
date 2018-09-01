@@ -23,6 +23,11 @@
 		AD7EA2ED2128D2890055E14F /* PhotoListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */; };
 		AD7EA2EE2128D29F0055E14F /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */; };
 		AD7EA2F12128D3310055E14F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DEB21285FC200FDB4CD /* Photo.swift */; };
+		ADE1253A213B495F004521FA /* DataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE12539213B495F004521FA /* DataManagerTest.swift */; };
+		ADE1253B213B49ED004521FA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6C212870C50027C7B9 /* APIService.swift */; };
+		ADE1253C213B49F9004521FA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
+		ADE1253E213B4ECC004521FA /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1253D213B4ECC004521FA /* TestHelper.swift */; };
+		ADE12541213B53C8004521FA /* XCTest+AllTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE12540213B53C8004521FA /* XCTest+AllTests.swift */; };
 		ADEF9035213B1A7D00443D6E /* IDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9034213B1A7D00443D6E /* IDataManager.swift */; };
 		ADEF9036213B1B7300443D6E /* IDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9034213B1A7D00443D6E /* IDataManager.swift */; };
 		ADEF9038213B1C3000443D6E /* AlamofireAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */; };
@@ -65,6 +70,9 @@
 		AD7EA2E62128BB8C0055E14F /* iOSMVVMDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSMVVMDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD7EA2EA2128BFE30055E14F /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModelTest.swift; sourceTree = "<group>"; };
+		ADE12539213B495F004521FA /* DataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTest.swift; sourceTree = "<group>"; };
+		ADE1253D213B4ECC004521FA /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		ADE12540213B53C8004521FA /* XCTest+AllTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+AllTests.swift"; sourceTree = "<group>"; };
 		ADEF9034213B1A7D00443D6E /* IDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDataManager.swift; sourceTree = "<group>"; };
 		ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIService.swift; sourceTree = "<group>"; };
 		E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSMVVMDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +214,9 @@
 			children = (
 				AD7239242129DCAB0090154A /* GeneratedMocks.swift */,
 				AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */,
+				ADE12539213B495F004521FA /* DataManagerTest.swift */,
+				ADE1253D213B4ECC004521FA /* TestHelper.swift */,
+				ADE12540213B53C8004521FA /* XCTest+AllTests.swift */,
 				AD6E4C042128506E0073EE2E /* Info.plist */,
 			);
 			path = iOSMVVMDemoTests;
@@ -398,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file; change \"${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory; change \"${PROJECT_NAME}\" to your project's root source folder, if it's not the default name\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/data/IDataManager.swift\"";
+			shellScript = "# Define output file; change \"${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory; change \"${PROJECT_NAME}\" to your project's root source folder, if it's not the default name\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/data/IDataManager.swift\" \\\n\"${INPUT_DIR}/data/api/APIService.swift\"";
 		};
 		E0C7CDB67E0BFA9A37F288A1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -450,9 +461,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADEF9036213B1B7300443D6E /* IDataManager.swift in Sources */,
+				ADE1253E213B4ECC004521FA /* TestHelper.swift in Sources */,
 				AD7EA2ED2128D2890055E14F /* PhotoListViewModelTest.swift in Sources */,
+				ADE1253A213B495F004521FA /* DataManagerTest.swift in Sources */,
 				AD7239252129DCAC0090154A /* GeneratedMocks.swift in Sources */,
 				AD7EA2EE2128D29F0055E14F /* PhotoListViewModel.swift in Sources */,
+				ADE12541213B53C8004521FA /* XCTest+AllTests.swift in Sources */,
+				ADE1253B213B49ED004521FA /* APIService.swift in Sources */,
+				ADE1253C213B49F9004521FA /* DataManager.swift in Sources */,
 				AD7EA2F12128D3310055E14F /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

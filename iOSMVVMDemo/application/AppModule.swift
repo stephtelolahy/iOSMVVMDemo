@@ -10,5 +10,6 @@
 class AppModule {
 
     static let sharedApiService: APIService = AlamofireAPIService()
+    
     static let sharedDataManager: IDataManager = DataManager(apiService: sharedApiService)
 }

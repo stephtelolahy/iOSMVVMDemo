@@ -13,12 +13,13 @@ import RxTest
 
 class PhotoListViewModelTest: XCTestCase {
     
-    private var mockDataManager: MockIDataManager!
     private var viewModel: PhotoListViewModel!
-    private let disposeBag = DisposeBag()
+    
+    private var mockDataManager: MockIDataManager!
     private var photosObserver: TestableObserver<[Photo]>!
     private var errorObserver: TestableObserver<Error>!
     private var loadingObserver: TestableObserver<Bool>!
+    private let disposeBag = DisposeBag()
     
     override func setUp() {
         super.setUp()
@@ -33,9 +34,9 @@ class PhotoListViewModelTest: XCTestCase {
         viewModel.loadingSubject.subscribe(loadingObserver).disposed(by: disposeBag)
     }
     
-    func testFetchPhotoSucceedOnViewWillAppear() {
+    func testPhotoLoadedOnViewWillAppearIfDataManagerSucceed() {
         // Given
-        let photos = [Photo.sample()]
+        let photos = [samplePhoto()]
         stub(mockDataManager) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.just(photos))
         }
@@ -50,9 +51,9 @@ class PhotoListViewModelTest: XCTestCase {
         XCTAssertEqual([next(0, true), next(0, false)], loadingObserver.events)
     }
     
-    func testFetchPhotoFailedOnViewWillAppear() {
+    func testErrorOcurredOnViewWillAppearIfDataManagerFailed() {
         // Given
-        let error: Error = NSError(domain: "Got an error", code: 0)
+        let error = sampleError()
         stub(mockDataManager) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.error(error))
         }
@@ -62,8 +63,7 @@ class PhotoListViewModelTest: XCTestCase {
         
         // Assert
         verify(mockDataManager, times(1)).fetchPhotos()
-        XCTAssertEqual(1, errorObserver.events.count)
-        XCTAssertEqual(error.localizedDescription, errorObserver.events[0].value.element!.localizedDescription)
+        XCTAssertErrorEqual(error, errorObserver.events[0].value.element!)
         XCTAssertEqual([next(0, true), next(0, false)], loadingObserver.events)
     }
 }
@@ -71,18 +71,5 @@ class PhotoListViewModelTest: XCTestCase {
 extension Photo: Equatable {
     static func ==(lhs: Photo, rhs: Photo) -> Bool {
         return lhs.id == rhs.id
-    }
-}
-
-extension Photo {
-    static func sample() -> Photo {
-        return Photo(id: Int(arc4random_uniform(UInt32(100))) ,
-                     format: "jpeg",
-                     width: 4912,
-                     height: 2760,
-                     filename: "0144_TuOiIpkIea8.jpeg",
-                     author: "Mouly Kumar",
-                     author_url: "https://unsplash.com/@moulykumar",
-                     post_url: "https://unsplash.com/photos/TuOiIpkIea8")
     }
 }
