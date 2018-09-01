@@ -23,10 +23,3 @@ class PhotoCell: UITableViewCell {
         photoImageView.kf.setImage(with: URL(string: photo.thumbUrl()))
     }
 }
-
-private extension Photo {
-    
-    func thumbUrl() -> String {
-        return "https://picsum.photos/200/300?image=\(id)"
-    }
-}

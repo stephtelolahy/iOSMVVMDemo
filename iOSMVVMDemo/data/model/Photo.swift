@@ -16,3 +16,14 @@ struct Photo: Codable {
     let author_url: String
     let post_url: String
 }
+
+extension Photo {
+    
+    func thumbUrl() -> String {
+        return "https://picsum.photos/200/300?image=\(id)"
+    }
+    
+    func fullUrl() -> String {
+        return "https://picsum.photos/1024?image=\(id)"
+    }
+}

@@ -10,7 +10,7 @@ import RxSwift
 
 class PhotoListViewModel {
     
-    private unowned let dataManager: IDataManager
+    private let dataManager: IDataManager
     private let disposeBag = DisposeBag()
     
     let photosSubject = PublishSubject<[Photo]>()

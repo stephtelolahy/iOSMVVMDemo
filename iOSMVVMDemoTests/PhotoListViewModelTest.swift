@@ -31,7 +31,7 @@ class PhotoListViewModelTest: XCTestCase {
         // Given
         let photos = [Photo.sample()]
         stub(mockDataManager) { mock in
-            mock.fetchPhotos().thenReturn(Observable.just(photos))
+            when(mock.fetchPhotos()).thenReturn(Observable.just(photos))
         }
         
         // When
@@ -39,6 +39,7 @@ class PhotoListViewModelTest: XCTestCase {
         
         // Assert
         verify(mockDataManager, times(1)).fetchPhotos()
+        verifyNoMoreInteractions(mockDataManager)
         XCTAssertEqual(1, photosObserver.events.count)
         XCTAssertEqual(photos, photosObserver.events[0].value.element!)
     }

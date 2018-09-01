@@ -2,18 +2,17 @@
 
 A basic iOS project aimed to be easy to maintain
 
-**Keywords: Model-View-ViewModel (MVVM) pattern + RX + Tests**
+**Keywords: Model-View-ViewModel + RX + Tests**
 
 ### Done
-* MVVM pattern with RXSwift
 * Dependency injection pattern
-* API Service with Alamofire+Codable
-* Test viewModel with Cuckoo + RxTest
+* APIService with Alamofire + Codable
+* ViewModel with PublishSubject
+* ViewModelTest with Cuckoo + RxTest
 
 ### TODO
-* MVVM pattern using property setter + closure (maybe cleaner)
 * APIService implementation using local resource
-* Unit test network layer (Quick, Nimble)
+* NetworkLayerTest with Quick, Nimble
 * Swift lint (prevent force unwrap)
 * Save preferred photos -> Home: [All][Starred]
 

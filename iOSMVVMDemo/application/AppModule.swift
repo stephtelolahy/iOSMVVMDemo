@@ -9,6 +9,6 @@
 // Application dependencies
 class AppModule {
 
-    static let sharedApiService = AlamofireAPIService()
-    static let sharedDataManager = DataManager(apiService: sharedApiService)
+    static let sharedApiService: APIService = AlamofireAPIService()
+    static let sharedDataManager: IDataManager = DataManager(apiService: sharedApiService)
 }

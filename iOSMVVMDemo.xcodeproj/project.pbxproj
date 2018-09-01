@@ -22,9 +22,10 @@
 		AD7EA2EB2128BFE30055E14F /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2EA2128BFE30055E14F /* PhotoDetailViewController.swift */; };
 		AD7EA2ED2128D2890055E14F /* PhotoListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */; };
 		AD7EA2EE2128D29F0055E14F /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */; };
-		AD7EA2EF2128D2DC0055E14F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
-		AD7EA2F02128D3240055E14F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6C212870C50027C7B9 /* APIService.swift */; };
 		AD7EA2F12128D3310055E14F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DEB21285FC200FDB4CD /* Photo.swift */; };
+		ADEF9035213B1A7D00443D6E /* IDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9034213B1A7D00443D6E /* IDataManager.swift */; };
+		ADEF9036213B1B7300443D6E /* IDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9034213B1A7D00443D6E /* IDataManager.swift */; };
+		ADEF9038213B1C3000443D6E /* AlamofireAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */; };
 		C5123FB26453E15679274D1F /* Pods_iOSMVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */; };
 		DA2656EF4962A92C3F1053EC /* Pods_iOSMVVMDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25356394C8DEF973281ACA /* Pods_iOSMVVMDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,8 @@
 		AD7EA2E62128BB8C0055E14F /* iOSMVVMDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSMVVMDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AD7EA2EA2128BFE30055E14F /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModelTest.swift; sourceTree = "<group>"; };
+		ADEF9034213B1A7D00443D6E /* IDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDataManager.swift; sourceTree = "<group>"; };
+		ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIService.swift; sourceTree = "<group>"; };
 		E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSMVVMDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				AD0BCF6C212870C50027C7B9 /* APIService.swift */,
+				ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -138,6 +142,7 @@
 			children = (
 				AD426DEA21285FAE00FDB4CD /* model */,
 				AD0BCF6B212870B30027C7B9 /* api */,
+				ADEF9034213B1A7D00443D6E /* IDataManager.swift */,
 				AD426DED2128608A00FDB4CD /* DataManager.swift */,
 			);
 			path = data;
@@ -241,10 +246,10 @@
 			buildConfigurationList = AD6E4C0A2128506E0073EE2E /* Build configuration list for PBXNativeTarget "iOSMVVMDemoTests" */;
 			buildPhases = (
 				3641DF0BD232FD0DC0F3B3B2 /* [CP] Check Pods Manifest.lock */,
+				AD1AFBFB2129D54A00C2F51F /* Run Cuckoo */,
 				AD6E4BFA2128506E0073EE2E /* Sources */,
 				AD6E4BFB2128506E0073EE2E /* Frameworks */,
 				AD6E4BFC2128506E0073EE2E /* Resources */,
-				AD1AFBFB2129D54A00C2F51F /* ShellScript */,
 				E0C7CDB67E0BFA9A37F288A1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -381,18 +386,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AD1AFBFB2129D54A00C2F51F /* ShellScript */ = {
+		AD1AFBFB2129D54A00C2F51F /* Run Cuckoo */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Cuckoo";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file; change \"${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory; change \"${PROJECT_NAME}\" to your project's root source folder, if it's not the default name\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/data/DataManager.swift\"";
+			shellScript = "# Define output file; change \"${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory; change \"${PROJECT_NAME}\" to your project's root source folder, if it's not the default name\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/data/IDataManager.swift\"";
 		};
 		E0C7CDB67E0BFA9A37F288A1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -428,9 +434,11 @@
 				AD0BCF6D212870C50027C7B9 /* APIService.swift in Sources */,
 				AD0BCF6A2128662D0027C7B9 /* PhotoListViewModel.swift in Sources */,
 				AD0BCF68212865D20027C7B9 /* PhotoCell.swift in Sources */,
+				ADEF9035213B1A7D00443D6E /* IDataManager.swift in Sources */,
 				AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */,
 				AD7EA2EB2128BFE30055E14F /* PhotoDetailViewController.swift in Sources */,
 				AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */,
+				ADEF9038213B1C3000443D6E /* AlamofireAPIService.swift in Sources */,
 				AD426DE921285EC800FDB4CD /* PhotoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,10 +447,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADEF9036213B1B7300443D6E /* IDataManager.swift in Sources */,
 				AD7EA2ED2128D2890055E14F /* PhotoListViewModelTest.swift in Sources */,
 				AD7239252129DCAC0090154A /* GeneratedMocks.swift in Sources */,
-				AD7EA2EF2128D2DC0055E14F /* DataManager.swift in Sources */,
-				AD7EA2F02128D3240055E14F /* APIService.swift in Sources */,
 				AD7EA2EE2128D29F0055E14F /* PhotoListViewModel.swift in Sources */,
 				AD7EA2F12128D3310055E14F /* Photo.swift in Sources */,
 			);

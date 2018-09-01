@@ -8,10 +8,6 @@
 
 import RxSwift
 
-protocol IDataManager: class {
-    func fetchPhotos() -> Observable<[Photo]>
-}
-
 class DataManager: IDataManager {
     
     // MARK: - Dependencies

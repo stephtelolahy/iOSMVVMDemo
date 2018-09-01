@@ -21,10 +21,3 @@ class PhotoDetailViewController: UIViewController {
         photoImageView.kf.setImage(with: URL(string: photo.fullUrl()))
     }
 }
-
-private extension Photo {
-    
-    func fullUrl() -> String {
-        return "https://picsum.photos/1024?image=\(id)"
-    }
-}
