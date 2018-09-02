@@ -17,6 +17,8 @@
 		AD5A9840213BC59B00D150EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5A983C213BC59B00D150EE /* LaunchScreen.storyboard */; };
 		AD5A9841213BC59B00D150EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5A983E213BC59B00D150EE /* Main.storyboard */; };
 		AD5A9845213BC70800D150EE /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A9844213BC70800D150EE /* AppModules.swift */; };
+		AD5A9847213BC79A00D150EE /* LocalAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A9846213BC79A00D150EE /* LocalAPIService.swift */; };
+		AD5A984A213BC81000D150EE /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = AD5A9849213BC81000D150EE /* photos.json */; };
 		AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4BED2128506D0073EE2E /* AppDelegate.swift */; };
 		AD6E4BF52128506D0073EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6E4BF42128506D0073EE2E /* Assets.xcassets */; };
 		AD7239252129DCAC0090154A /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7239242129DCAB0090154A /* GeneratedMocks.swift */; };
@@ -61,6 +63,8 @@
 		AD5A983D213BC59B00D150EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD5A983F213BC59B00D150EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD5A9844213BC70800D150EE /* AppModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModules.swift; sourceTree = "<group>"; };
+		AD5A9846213BC79A00D150EE /* LocalAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPIService.swift; sourceTree = "<group>"; };
+		AD5A9849213BC81000D150EE /* photos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
 		AD6E4BEA2128506D0073EE2E /* iOSMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6E4BED2128506D0073EE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD6E4BF42128506D0073EE2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			children = (
 				AD0BCF6C212870C50027C7B9 /* APIService.swift */,
 				ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */,
+				AD5A9846213BC79A00D150EE /* LocalAPIService.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -199,6 +204,14 @@
 			path = modules;
 			sourceTree = "<group>";
 		};
+		AD5A9848213BC7E500D150EE /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD5A9849213BC81000D150EE /* photos.json */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		AD6E4BE12128506D0073EE2E = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +242,7 @@
 				AD5A983E213BC59B00D150EE /* Main.storyboard */,
 				AD7EA2E62128BB8C0055E14F /* iOSMVVMDemo-Bridging-Header.h */,
 				AD6E4BF92128506D0073EE2E /* Info.plist */,
+				AD5A9848213BC7E500D150EE /* resources */,
 				AD6E4BF42128506D0073EE2E /* Assets.xcassets */,
 			);
 			path = iOSMVVMDemo;
@@ -343,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5A984A213BC81000D150EE /* photos.json in Resources */,
 				AD5A9841213BC59B00D150EE /* Main.storyboard in Resources */,
 				AD6E4BF52128506D0073EE2E /* Assets.xcassets in Resources */,
 				AD5A9840213BC59B00D150EE /* LaunchScreen.storyboard in Resources */,
@@ -472,6 +487,7 @@
 				AD0BCF68212865D20027C7B9 /* PhotoCell.swift in Sources */,
 				ADEF9035213B1A7D00443D6E /* IDataManager.swift in Sources */,
 				AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */,
+				AD5A9847213BC79A00D150EE /* LocalAPIService.swift in Sources */,
 				AD7EA2EB2128BFE30055E14F /* PhotoDetailViewController.swift in Sources */,
 				AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */,
 				AD5A9845213BC70800D150EE /* AppModules.swift in Sources */,

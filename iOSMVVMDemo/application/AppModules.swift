@@ -8,6 +8,6 @@
 
 // Application dependencies
 
-let sharedApiService: APIService = AlamofireAPIService()
+let sharedApiService: APIService = LocalAPIService() //AlamofireAPIService()
 
 let sharedDataManager: IDataManager = DataManager(apiService: sharedApiService)

@@ -9,9 +9,9 @@ A basic iOS project aimed to be easy to maintain
 * APIService with Alamofire + Codable
 * ViewModel with PublishSubject
 * ViewModelTest with Cuckoo + RxTest
+* APIService implementation using local datasource
 
 ### TODO
-* APIService implementation using local datasource
 * NetworkLayerTest with Quick, Nimble
 * Swift lint (prevent force unwrap)
 * Save preferred photos -> Home: [All][Starred]
