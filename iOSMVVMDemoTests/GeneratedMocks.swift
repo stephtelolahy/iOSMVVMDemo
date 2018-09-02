@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: iOSMVVMDemo/data/IDataManager.swift at 2018-09-02 07:07:11 +0000
+// MARK: - Mocks generated from file: iOSMVVMDemo/data/IDataManager.swift at 2018-09-02 07:23:16 +0000
 
 //
 //  IDataManager.swift
@@ -88,7 +88,7 @@ class MockIDataManager: IDataManager, Cuckoo.ProtocolMock {
 }
 
 
-// MARK: - Mocks generated from file: iOSMVVMDemo/data/api/APIService.swift at 2018-09-02 07:07:11 +0000
+// MARK: - Mocks generated from file: iOSMVVMDemo/data/api/APIService.swift at 2018-09-02 07:23:16 +0000
 
 //
 //  APIService.swift

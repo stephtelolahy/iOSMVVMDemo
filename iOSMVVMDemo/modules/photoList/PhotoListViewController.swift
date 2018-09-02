@@ -15,7 +15,7 @@ class PhotoListViewController: UITableViewController {
     // MARK: - Fields
     
     private lazy var viewModel: PhotoListViewModel = {
-        return PhotoListViewModel(dataManager: AppModule.sharedDataManager)
+        return PhotoListViewModel(dataManager: sharedDataManager)
     }()
     
     private var photos: [Photo] = []

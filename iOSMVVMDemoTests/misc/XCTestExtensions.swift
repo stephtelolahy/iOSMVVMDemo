@@ -1,5 +1,5 @@
 //
-//  XCTest+AllTests.swift
+//  XCTestExtensions.swift
 //  iOSMVVMDemoTests
 //
 //  Created by Hugues Stéphano TELOLAHY on 9/2/18.
@@ -92,3 +92,4 @@ func doOnBackgroundQueue(_ action: @escaping () -> ()) {
 func doOnMainQueue(_ action: @escaping () -> ()) {
     DispatchQueue.main.async(execute: action)
 }
+

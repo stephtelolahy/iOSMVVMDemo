@@ -32,7 +32,7 @@ class DataManagerTest: XCTestCase {
         
         // When
         // Assert
-        XCTAssertEqual(try dataManager.fetchPhotos().toBlocking(timeout: 0.01).first(), expectedPhotos)
+        XCTAssertEqual(try dataManager.fetchPhotos().toBlocking(timeout: 0.1).first(), expectedPhotos)
     }
     
     func testFetchPhotosFailIfApiServiceFails() {
