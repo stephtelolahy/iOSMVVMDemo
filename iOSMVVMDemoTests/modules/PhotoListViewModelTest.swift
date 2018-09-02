@@ -25,6 +25,7 @@ class PhotoListViewModelTest: XCTestCase {
         super.setUp()
         mockDataManager = MockIDataManager()
         viewModel = PhotoListViewModel(dataManager: mockDataManager)
+        
         let scheduler = TestScheduler(initialClock: 0)
         photosObserver = scheduler.createObserver([Photo].self)
         viewModel.photosSubject.subscribe(photosObserver).disposed(by: disposeBag)
@@ -36,7 +37,7 @@ class PhotoListViewModelTest: XCTestCase {
     
     func testPhotoLoadedOnViewWillAppearIfDataManagerSucceed() {
         // Given
-        let photos = [samplePhoto()]
+        let photos = [Photo.sample()]
         Cuckoo.stub(mockDataManager) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.just(photos))
         }
@@ -46,14 +47,13 @@ class PhotoListViewModelTest: XCTestCase {
         
         // Assert
         verify(mockDataManager, times(1)).fetchPhotos()
-        verifyNoMoreInteractions(mockDataManager)
         XCTAssertEqual([next(0, photos)], photosObserver.events)
         XCTAssertEqual([next(0, true), next(0, false)], loadingObserver.events)
     }
     
     func testErrorOcurredOnViewWillAppearIfDataManagerFailed() {
         // Given
-        let error = sampleError()
+        let error = NSError(domain: "Got an error", code: 0)
         Cuckoo.stub(mockDataManager) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.error(error))
         }
@@ -63,12 +63,7 @@ class PhotoListViewModelTest: XCTestCase {
         
         // Assert
         XCTAssertErrorEqual(error, errorObserver.events[0].value.element!)
+        XCTAssertEqual([], photosObserver.events)
         XCTAssertEqual([next(0, true), next(0, false)], loadingObserver.events)
-    }
-}
-
-extension Photo: Equatable {
-    static func ==(lhs: Photo, rhs: Photo) -> Bool {
-        return lhs.id == rhs.id
     }
 }

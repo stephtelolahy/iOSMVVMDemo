@@ -31,10 +31,10 @@
 		ADCBFAE3213C5B2300F1A991 /* AlamofireAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */; };
 		ADCBFAE6213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */; };
 		ADCBFAE7213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */; };
+		ADCBFAED213C6BD800F1A991 /* PhotoExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAEB213C6BD800F1A991 /* PhotoExtensions.swift */; };
 		ADE1253A213B495F004521FA /* DataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE12539213B495F004521FA /* DataManagerTest.swift */; };
 		ADE1253B213B49ED004521FA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6C212870C50027C7B9 /* APIService.swift */; };
 		ADE1253C213B49F9004521FA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
-		ADE1253E213B4ECC004521FA /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1253D213B4ECC004521FA /* TestHelper.swift */; };
 		ADEF9035213B1A7D00443D6E /* IDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9034213B1A7D00443D6E /* IDataManager.swift */; };
 		ADEF9036213B1B7300443D6E /* IDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9034213B1A7D00443D6E /* IDataManager.swift */; };
 		ADEF9038213B1C3000443D6E /* AlamofireAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */; };
@@ -86,8 +86,8 @@
 		ADCBFADF213C590500F1A991 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		ADCBFAE1213C5AE400F1A991 /* AlamofireAPIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIServiceTest.swift; sourceTree = "<group>"; };
 		ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIJsonDecoder.swift; sourceTree = "<group>"; };
+		ADCBFAEB213C6BD800F1A991 /* PhotoExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoExtensions.swift; sourceTree = "<group>"; };
 		ADE12539213B495F004521FA /* DataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTest.swift; sourceTree = "<group>"; };
-		ADE1253D213B4ECC004521FA /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		ADEF9034213B1A7D00443D6E /* IDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDataManager.swift; sourceTree = "<group>"; };
 		ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIService.swift; sourceTree = "<group>"; };
 		BCE3B806FE0E51C361EB1A5F /* Pods-iOSMVVMDemo.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemo.staging.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo.staging.xcconfig"; sourceTree = "<group>"; };
@@ -199,8 +199,8 @@
 		AD5A9837213BC47500D150EE /* misc */ = {
 			isa = PBXGroup;
 			children = (
-				ADE1253D213B4ECC004521FA /* TestHelper.swift */,
 				AD5A9838213BC4A300D150EE /* XCTestExtensions.swift */,
+				ADCBFAEB213C6BD800F1A991 /* PhotoExtensions.swift */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -526,11 +526,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADEF9036213B1B7300443D6E /* IDataManager.swift in Sources */,
-				ADE1253E213B4ECC004521FA /* TestHelper.swift in Sources */,
 				AD7EA2ED2128D2890055E14F /* PhotoListViewModelTest.swift in Sources */,
 				ADCBFAE7213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */,
 				ADCBFAE3213C5B2300F1A991 /* AlamofireAPIService.swift in Sources */,
 				ADE1253A213B495F004521FA /* DataManagerTest.swift in Sources */,
+				ADCBFAED213C6BD800F1A991 /* PhotoExtensions.swift in Sources */,
 				AD7239252129DCAC0090154A /* GeneratedMocks.swift in Sources */,
 				AD7EA2EE2128D29F0055E14F /* PhotoListViewModel.swift in Sources */,
 				AD5A9839213BC4A300D150EE /* XCTestExtensions.swift in Sources */,

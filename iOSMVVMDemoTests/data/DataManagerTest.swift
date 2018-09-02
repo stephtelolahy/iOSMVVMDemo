@@ -25,7 +25,7 @@ class DataManagerTest: XCTestCase {
     
     func testFetchPhotosSucceedIfApiServiceSucceed() {
         // Given
-        let expectedPhotos = [samplePhoto()]
+        let expectedPhotos = [Photo.sample()]
         Cuckoo.stub(mockAPIService) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.just(expectedPhotos))
         }
@@ -37,7 +37,7 @@ class DataManagerTest: XCTestCase {
     
     func testFetchPhotosFailIfApiServiceFails() {
         // Given
-        let expectedError = sampleError()
+        let expectedError = NSError(domain: "Got an error", code: 0)
         Cuckoo.stub(mockAPIService) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.error(expectedError))
         }
