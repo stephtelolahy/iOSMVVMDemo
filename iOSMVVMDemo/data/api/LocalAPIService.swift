@@ -10,17 +10,30 @@ import RxSwift
 
 class LocalAPIService: APIService {
     
-    func fetchPhotos() -> Observable<[Photo]> {
-        return load([Photo].self, from: "photos")
+    // MARK: - Dependencies
+    
+    private let jsonDecoder: JSONDecoder
+    
+    init(decoder: JSONDecoder) {
+        jsonDecoder = decoder
     }
     
-    func load<T: Codable>(_ class: T.Type, from file: String) -> Observable<T> {
+    // MARK: - APIService
+    
+    func fetchPhotos() -> Observable<[Photo]> {
+        return Bundle.main.load([Photo].self, decoder: jsonDecoder, from: "photos")
+    }
+}
+
+private extension Bundle {
+    
+    func load<T: Codable>(_ class: T.Type,
+                          decoder: JSONDecoder,
+                          from file: String) -> Observable<T> {
         return Observable.create{ observer in
             do {
-                let fileURL = Bundle(for: type(of: self)).url(forResource: file, withExtension:"json")!
+                let fileURL = self.url(forResource: file, withExtension:"json")!
                 let data = try Data(contentsOf: fileURL)
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
                 let model = try decoder.decode(T.self, from: data)
                 observer.onNext(model)
                 observer.onCompleted()

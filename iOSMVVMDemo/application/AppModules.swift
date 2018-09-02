@@ -8,6 +8,24 @@
 
 // Application dependencies
 
-let sharedApiService: APIService = LocalAPIService() //AlamofireAPIService()
+private let useLocalDataSource: Bool = Bundle.main.infoDictionary?["USE_LOCAL_DATASOURCE"] as? String == "YES"
+
+private let serverUrl: String = Bundle.main.infoDictionary?["SERVER_URL"] as! String
+
+private func createJsonDecoder() -> JSONDecoder {
+    let decoder = JSONDecoder()
+    decoder.dateDecodingStrategy = .iso8601
+    return decoder
+}
+
+private func createRemoteAPIService() -> APIService {
+    return AlamofireAPIService(serverUrl: serverUrl, decoder: createJsonDecoder())
+}
+
+private func createLocalAPIService() -> APIService {
+    return LocalAPIService(decoder: createJsonDecoder())
+}
+
+private let sharedApiService: APIService = useLocalDataSource ? createLocalAPIService() : createRemoteAPIService()
 
 let sharedDataManager: IDataManager = DataManager(apiService: sharedApiService)
