@@ -2,9 +2,10 @@
 
 A basic iOS project to be easy to maintain
 
-**Keywords: Model-View-ViewModel + Dependency injectyion + RX + Tests + Multiple schemes**
+**Keywords**
+> Model-View-ViewModel + Dependency injectyion + RX + Tests + Multiple schemes
 
-### Features
+## Features
 * Dependency injection pattern
 * ViewModel with PublishSubject
 * ViewModel test with Cuckoo + RxTest
@@ -12,13 +13,9 @@ A basic iOS project to be easy to maintain
 * Local APIService with bundled Json files
 * DataManager test with RXBlocking
 * Multiple build configurations within single target
+* Json<->Model mapping test with Mockingjay
 
-### TODO
-* Json<->Model mapping test (Quick, Nimble)
-* Swift lint (prevent force unwrap)
-* Save preferred photos (NSUserDefaults)
-
-### References
+## References
 * [Lorem Picsum](https://picsum.photos)
 * [Memory management in RXSwift](http://adamborek.com/memory-managment-rxswift/)
 * [RXSwift subjects](https://medium.com/@dkhuong291/rxswift-subjects-part1-publishsubjects-103ff6b06932)

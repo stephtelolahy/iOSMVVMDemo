@@ -37,7 +37,7 @@ class PhotoListViewModelTest: XCTestCase {
     func testPhotoLoadedOnViewWillAppearIfDataManagerSucceed() {
         // Given
         let photos = [samplePhoto()]
-        stub(mockDataManager) { mock in
+        Cuckoo.stub(mockDataManager) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.just(photos))
         }
         
@@ -54,7 +54,7 @@ class PhotoListViewModelTest: XCTestCase {
     func testErrorOcurredOnViewWillAppearIfDataManagerFailed() {
         // Given
         let error = sampleError()
-        stub(mockDataManager) { mock in
+        Cuckoo.stub(mockDataManager) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.error(error))
         }
         
@@ -62,7 +62,6 @@ class PhotoListViewModelTest: XCTestCase {
         viewModel.onViewWillAppear()
         
         // Assert
-        verify(mockDataManager, times(1)).fetchPhotos()
         XCTAssertErrorEqual(error, errorObserver.events[0].value.element!)
         XCTAssertEqual([next(0, true), next(0, false)], loadingObserver.events)
     }

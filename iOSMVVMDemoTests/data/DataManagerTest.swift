@@ -26,7 +26,7 @@ class DataManagerTest: XCTestCase {
     func testFetchPhotosSucceedIfApiServiceSucceed() {
         // Given
         let expectedPhotos = [samplePhoto()]
-        stub(mockAPIService) { mock in
+        Cuckoo.stub(mockAPIService) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.just(expectedPhotos))
         }
         
@@ -38,7 +38,7 @@ class DataManagerTest: XCTestCase {
     func testFetchPhotosFailIfApiServiceFails() {
         // Given
         let expectedError = sampleError()
-        stub(mockAPIService) { mock in
+        Cuckoo.stub(mockAPIService) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.error(expectedError))
         }
         

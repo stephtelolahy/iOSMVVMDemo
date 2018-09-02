@@ -18,6 +18,7 @@ target 'iOSMVVMDemo' do
     pod 'Cuckoo'
     pod 'RxTest'
     pod 'RxBlocking'
+    pod 'Mockingjay'
   end
 
 end

@@ -12,18 +12,12 @@ private let useLocalDataSource: Bool = Bundle.main.infoDictionary?["USE_LOCAL_DA
 
 private let serverUrl: String = Bundle.main.infoDictionary?["SERVER_URL"] as! String
 
-private func createJsonDecoder() -> JSONDecoder {
-    let decoder = JSONDecoder()
-    decoder.dateDecodingStrategy = .iso8601
-    return decoder
-}
-
 private func createRemoteAPIService() -> APIService {
-    return AlamofireAPIService(serverUrl: serverUrl, decoder: createJsonDecoder())
+    return AlamofireAPIService(serverUrl: serverUrl, decoder: APIJsonDecoder())
 }
 
 private func createLocalAPIService() -> APIService {
-    return LocalAPIService(decoder: createJsonDecoder())
+    return LocalAPIService(decoder: APIJsonDecoder())
 }
 
 private let sharedApiService: APIService = useLocalDataSource ? createLocalAPIService() : createRemoteAPIService()

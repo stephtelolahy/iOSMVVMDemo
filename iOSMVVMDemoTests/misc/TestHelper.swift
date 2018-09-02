@@ -13,7 +13,7 @@ func sampleError() -> Error {
 }
 
 func samplePhoto() -> Photo {
-    return Photo(id: Int(arc4random_uniform(UInt32(100))) ,
+    return Photo(id: 1 ,
                  format: "jpeg",
                  width: 4912,
                  height: 2760,
