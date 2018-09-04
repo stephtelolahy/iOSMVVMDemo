@@ -20,7 +20,7 @@ struct Photo: Codable {
 extension Photo {
     
     func thumbUrl() -> String {
-        return "https://picsum.photos/200/300?image=\(id)"
+        return "https://picsum.photos/640?image=\(id)"
     }
     
     func fullUrl() -> String {
