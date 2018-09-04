@@ -8,6 +8,8 @@
 
 // Application dependencies
 
+import Foundation
+
 private let useLocalDataSource: Bool = Bundle.main.infoDictionary?["USE_LOCAL_DATASOURCE"] as? String == "YES"
 
 private let serverUrl: String = Bundle.main.infoDictionary?["SERVER_URL"] as! String

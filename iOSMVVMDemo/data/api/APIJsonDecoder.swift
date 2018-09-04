@@ -9,9 +9,4 @@
 import Foundation
 
 class APIJsonDecoder: JSONDecoder {
-    
-    override init() {
-        super.init()
-        self.dateDecodingStrategy = .iso8601
-    }
 }

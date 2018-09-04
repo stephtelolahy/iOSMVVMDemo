@@ -8,7 +8,6 @@
 
 import UIKit
 import RxSwift
-import MBProgressHUD
 
 class PhotoListViewController: UITableViewController {
     
@@ -62,9 +61,9 @@ class PhotoListViewController: UITableViewController {
         
         viewModel.loadingSubject.subscribe(onNext: { loading in
             if (loading) {
-                MBProgressHUD.showAdded(to: self.view, animated: true)
+                // show loader
             } else {
-                MBProgressHUD.hide(for: self.view, animated: true)
+                // hide loader
             }
         }).disposed(by: disposeBag)
         
