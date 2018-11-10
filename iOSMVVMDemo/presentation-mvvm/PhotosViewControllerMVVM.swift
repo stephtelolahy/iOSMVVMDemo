@@ -9,12 +9,12 @@
 import UIKit
 import RxSwift
 
-class PhotoListViewControllerMVVM: UITableViewController {
+class PhotosViewControllerMVVM: UITableViewController {
     
     // MARK: - Fields
     
-    private lazy var viewModel: PhotoListViewModel = {
-        return PhotoListViewModel(dataManager: sharedDataManager)
+    private lazy var viewModel: PhotosViewModel = {
+        return PhotosViewModel(dataManager: sharedDataManager)
     }()
     
     private var photos: [Photo] = []
@@ -24,7 +24,18 @@ class PhotoListViewControllerMVVM: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        observeViewData()
+        viewModel.photosSubject.subscribe(onNext: { photos in
+            self.photos = photos
+            self.tableView.reloadData()
+        }).disposed(by: disposeBag)
+        
+        viewModel.loadingSubject.subscribe(onNext: { loading in
+            print("Toggle loading \(loading)")
+        }).disposed(by: disposeBag)
+        
+        viewModel.errorSubject.subscribe(onNext: { error in
+            self.showAlert(withMessage: error.localizedDescription)
+        }).disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,27 +53,6 @@ class PhotoListViewControllerMVVM: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         cell.confgure(withPhoto: photos[indexPath.row])
         return cell
-    }
-    
-    // MARK: - Setup ViewModel
-    
-    private func observeViewData() {
-        viewModel.photosSubject.subscribe(onNext: { photos in
-            self.photos = photos
-            self.tableView.reloadData()
-        }).disposed(by: disposeBag)
-        
-        viewModel.loadingSubject.subscribe(onNext: { loading in
-            if (loading) {
-                // show loader
-            } else {
-                // hide loader
-            }
-        }).disposed(by: disposeBag)
-        
-        viewModel.errorSubject.subscribe(onNext: { error in
-            self.showAlert(withMessage: error.localizedDescription)
-        }).disposed(by: disposeBag)
     }
 }
 

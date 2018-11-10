@@ -8,7 +8,7 @@
 
 import RxSwift
 
-class PhotoListViewModel {
+class PhotosViewModel {
     
     private let dataManager: IDataManager
     private let disposeBag = DisposeBag()

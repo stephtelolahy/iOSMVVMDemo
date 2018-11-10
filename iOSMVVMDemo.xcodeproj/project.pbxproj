@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		AD0BCF68212865D20027C7B9 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF67212865D20027C7B9 /* PhotoCell.swift */; };
-		AD0BCF6A2128662D0027C7B9 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */; };
+		AD0BCF6A2128662D0027C7B9 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotosViewModel.swift */; };
 		AD0BCF6D212870C50027C7B9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6C212870C50027C7B9 /* APIService.swift */; };
-		AD426DE921285EC800FDB4CD /* PhotoListViewControllerMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DE821285EC800FDB4CD /* PhotoListViewControllerMVVM.swift */; };
+		AD426DE921285EC800FDB4CD /* PhotosViewControllerMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DE821285EC800FDB4CD /* PhotosViewControllerMVVM.swift */; };
 		AD426DEC21285FC200FDB4CD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DEB21285FC200FDB4CD /* Photo.swift */; };
 		AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
 		AD5A9839213BC4A300D150EE /* XCTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A9838213BC4A300D150EE /* XCTestExtensions.swift */; };
@@ -22,8 +22,8 @@
 		AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6E4BED2128506D0073EE2E /* AppDelegate.swift */; };
 		AD6E4BF52128506D0073EE2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6E4BF42128506D0073EE2E /* Assets.xcassets */; };
 		AD7239252129DCAC0090154A /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7239242129DCAB0090154A /* GeneratedMocks.swift */; };
-		AD7EA2ED2128D2890055E14F /* PhotoListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */; };
-		AD7EA2EE2128D29F0055E14F /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */; };
+		AD7EA2ED2128D2890055E14F /* PhotosViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2EC2128D2890055E14F /* PhotosViewModelTest.swift */; };
+		AD7EA2EE2128D29F0055E14F /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotosViewModel.swift */; };
 		AD7EA2F12128D3310055E14F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DEB21285FC200FDB4CD /* Photo.swift */; };
 		ADCBFAE0213C590500F1A991 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = ADCBFADF213C590500F1A991 /* readme.md */; };
 		ADCBFAE2213C5AE400F1A991 /* AlamofireAPIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAE1213C5AE400F1A991 /* AlamofireAPIServiceTest.swift */; };
@@ -31,6 +31,10 @@
 		ADCBFAE6213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */; };
 		ADCBFAE7213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */; };
 		ADCBFAED213C6BD800F1A991 /* PhotoExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAEB213C6BD800F1A991 /* PhotoExtensions.swift */; };
+		ADDF5DF52196E6E500042551 /* PhotosViewControllerMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF5DF42196E6E500042551 /* PhotosViewControllerMVP.swift */; };
+		ADDF5DF72196E7DA00042551 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF5DF62196E7DA00042551 /* PhotosPresenter.swift */; };
+		ADDF5DF82196E7DC00042551 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF5DF62196E7DA00042551 /* PhotosPresenter.swift */; };
+		ADDF5DFA2196E82B00042551 /* PhotosPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF5DF92196E82B00042551 /* PhotosPresenterTest.swift */; };
 		ADE1253A213B495F004521FA /* DataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE12539213B495F004521FA /* DataManagerTest.swift */; };
 		ADE1253B213B49ED004521FA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6C212870C50027C7B9 /* APIService.swift */; };
 		ADE1253C213B49F9004521FA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
@@ -61,9 +65,9 @@
 		96A9CC27D03258D30FFE6E4E /* Pods-iOSMVVMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A4347E0D161E222EDB4A3F85 /* Pods-iOSMVVMDemo.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemo.mock.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo.mock.xcconfig"; sourceTree = "<group>"; };
 		AD0BCF67212865D20027C7B9 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
-		AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		AD0BCF692128662D0027C7B9 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		AD0BCF6C212870C50027C7B9 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
-		AD426DE821285EC800FDB4CD /* PhotoListViewControllerMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewControllerMVVM.swift; sourceTree = "<group>"; };
+		AD426DE821285EC800FDB4CD /* PhotosViewControllerMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewControllerMVVM.swift; sourceTree = "<group>"; };
 		AD426DEB21285FC200FDB4CD /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		AD426DED2128608A00FDB4CD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AD5A9838213BC4A300D150EE /* XCTestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestExtensions.swift; sourceTree = "<group>"; };
@@ -79,11 +83,14 @@
 		AD6E4BFE2128506E0073EE2E /* iOSMVVMDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSMVVMDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6E4C042128506E0073EE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7239242129DCAB0090154A /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
-		AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModelTest.swift; sourceTree = "<group>"; };
+		AD7EA2EC2128D2890055E14F /* PhotosViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModelTest.swift; sourceTree = "<group>"; };
 		ADCBFADF213C590500F1A991 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		ADCBFAE1213C5AE400F1A991 /* AlamofireAPIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIServiceTest.swift; sourceTree = "<group>"; };
 		ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIJsonDecoder.swift; sourceTree = "<group>"; };
 		ADCBFAEB213C6BD800F1A991 /* PhotoExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoExtensions.swift; sourceTree = "<group>"; };
+		ADDF5DF42196E6E500042551 /* PhotosViewControllerMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewControllerMVP.swift; sourceTree = "<group>"; };
+		ADDF5DF62196E7DA00042551 /* PhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenter.swift; sourceTree = "<group>"; };
+		ADDF5DF92196E82B00042551 /* PhotosPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenterTest.swift; sourceTree = "<group>"; };
 		ADE12539213B495F004521FA /* DataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTest.swift; sourceTree = "<group>"; };
 		ADEF9034213B1A7D00443D6E /* IDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDataManager.swift; sourceTree = "<group>"; };
 		ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIService.swift; sourceTree = "<group>"; };
@@ -223,7 +230,8 @@
 		AD6E4C012128506E0073EE2E /* iOSMVVMDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				AD7EA2EC2128D2890055E14F /* PhotoListViewModelTest.swift */,
+				AD7EA2EC2128D2890055E14F /* PhotosViewModelTest.swift */,
+				ADDF5DF92196E82B00042551 /* PhotosPresenterTest.swift */,
 				ADE12539213B495F004521FA /* DataManagerTest.swift */,
 				ADCBFAE1213C5AE400F1A991 /* AlamofireAPIServiceTest.swift */,
 				AD5A9837213BC47500D150EE /* misc */,
@@ -236,8 +244,8 @@
 		AD8777F62196DDC6003D4784 /* presentation-mvvm */ = {
 			isa = PBXGroup;
 			children = (
-				AD426DE821285EC800FDB4CD /* PhotoListViewControllerMVVM.swift */,
-				AD0BCF692128662D0027C7B9 /* PhotoListViewModel.swift */,
+				AD426DE821285EC800FDB4CD /* PhotosViewControllerMVVM.swift */,
+				AD0BCF692128662D0027C7B9 /* PhotosViewModel.swift */,
 				AD0BCF67212865D20027C7B9 /* PhotoCell.swift */,
 			);
 			path = "presentation-mvvm";
@@ -246,6 +254,8 @@
 		AD8777F72196DDD3003D4784 /* presentation-mvp */ = {
 			isa = PBXGroup;
 			children = (
+				ADDF5DF42196E6E500042551 /* PhotosViewControllerMVP.swift */,
+				ADDF5DF62196E7DA00042551 /* PhotosPresenter.swift */,
 			);
 			path = "presentation-mvp";
 			sourceTree = "<group>";
@@ -429,7 +439,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file; change \"${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory; change \"${PROJECT_NAME}\" to your project's root source folder, if it's not the default name\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/data/IDataManager.swift\" \\\n\"${INPUT_DIR}/data/api/APIService.swift\"\n";
+			shellScript = "# Define output file; change \"${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name\nOUTPUT_FILE=\"./${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory; change \"${PROJECT_NAME}\" to your project's root source folder, if it's not the default name\nINPUT_DIR=\"./${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"$PROJECT_NAME\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/data/IDataManager.swift\" \\\n\"${INPUT_DIR}/data/api/APIService.swift\" \\\n\"${INPUT_DIR}/presentation-mvp/PhotosPresenter.swift\"\n";
 		};
 		E0C7CDB67E0BFA9A37F288A1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -468,8 +478,10 @@
 			files = (
 				AD426DEC21285FC200FDB4CD /* Photo.swift in Sources */,
 				AD0BCF6D212870C50027C7B9 /* APIService.swift in Sources */,
-				AD0BCF6A2128662D0027C7B9 /* PhotoListViewModel.swift in Sources */,
+				ADDF5DF52196E6E500042551 /* PhotosViewControllerMVP.swift in Sources */,
+				AD0BCF6A2128662D0027C7B9 /* PhotosViewModel.swift in Sources */,
 				AD0BCF68212865D20027C7B9 /* PhotoCell.swift in Sources */,
+				ADDF5DF72196E7DA00042551 /* PhotosPresenter.swift in Sources */,
 				ADEF9035213B1A7D00443D6E /* IDataManager.swift in Sources */,
 				AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */,
 				AD5A9847213BC79A00D150EE /* LocalAPIService.swift in Sources */,
@@ -477,7 +489,7 @@
 				AD5A9845213BC70800D150EE /* AppModules.swift in Sources */,
 				ADEF9038213B1C3000443D6E /* AlamofireAPIService.swift in Sources */,
 				ADCBFAE6213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */,
-				AD426DE921285EC800FDB4CD /* PhotoListViewControllerMVVM.swift in Sources */,
+				AD426DE921285EC800FDB4CD /* PhotosViewControllerMVVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,13 +498,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADEF9036213B1B7300443D6E /* IDataManager.swift in Sources */,
-				AD7EA2ED2128D2890055E14F /* PhotoListViewModelTest.swift in Sources */,
+				AD7EA2ED2128D2890055E14F /* PhotosViewModelTest.swift in Sources */,
 				ADCBFAE7213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */,
 				ADCBFAE3213C5B2300F1A991 /* AlamofireAPIService.swift in Sources */,
 				ADE1253A213B495F004521FA /* DataManagerTest.swift in Sources */,
+				ADDF5DF82196E7DC00042551 /* PhotosPresenter.swift in Sources */,
 				ADCBFAED213C6BD800F1A991 /* PhotoExtensions.swift in Sources */,
 				AD7239252129DCAC0090154A /* GeneratedMocks.swift in Sources */,
-				AD7EA2EE2128D29F0055E14F /* PhotoListViewModel.swift in Sources */,
+				ADDF5DFA2196E82B00042551 /* PhotosPresenterTest.swift in Sources */,
+				AD7EA2EE2128D29F0055E14F /* PhotosViewModel.swift in Sources */,
 				AD5A9839213BC4A300D150EE /* XCTestExtensions.swift in Sources */,
 				ADE1253B213B49ED004521FA /* APIService.swift in Sources */,
 				ADE1253C213B49F9004521FA /* DataManager.swift in Sources */,
