@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-class PhotoListViewController: UITableViewController {
+class PhotoListViewControllerMVVM: UITableViewController {
     
     // MARK: - Fields
     
@@ -44,13 +44,6 @@ class PhotoListViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - TableView delegate
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        viewModel.onPhotoSelected(photos[indexPath.row])
-    }
-    
     // MARK: - Setup ViewModel
     
     private func observeViewData() {
@@ -70,22 +63,6 @@ class PhotoListViewController: UITableViewController {
         viewModel.errorSubject.subscribe(onNext: { error in
             self.showAlert(withMessage: error.localizedDescription)
         }).disposed(by: disposeBag)
-        
-        viewModel.toDetailSubject.subscribe(onNext: { photo in
-            self.performSegue(withIdentifier: "toDetail", sender: photo)
-        }).disposed(by: disposeBag)
-    }
-    
-    
-    // MARK: - Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if let detailsViewController = segue.destination as? PhotoDetailViewController,
-            let photo = sender as? Photo {
-            detailsViewController.photo = photo
-        }
     }
 }
 
