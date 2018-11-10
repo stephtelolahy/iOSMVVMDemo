@@ -16,7 +16,6 @@ A basic iOS project to be easy to maintain
 * Json<->Model mapping test with Mockingjay
 
 ## References
-* [Lorem Picsum](https://picsum.photos)
 * [Memory management in RXSwift](http://adamborek.com/memory-managment-rxswift/)
 * [RXSwift subjects](https://medium.com/@dkhuong291/rxswift-subjects-part1-publishsubjects-103ff6b06932)
 * [Cuckoo](https://github.com/Brightify/Cuckoo)

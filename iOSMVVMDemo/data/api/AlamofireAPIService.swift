@@ -15,7 +15,7 @@ class AlamofireAPIService: APIService {
     
     private let serverUrl: String
     private let jsonDecoder: JSONDecoder
-    private let alamoFireManager = Alamofire.SessionManager(configuration: URLSessionConfiguration.default)
+    private let alamoFireManager = Alamofire.SessionManager(configuration: .default)
     
     init(serverUrl: String, decoder: JSONDecoder) {
         self.serverUrl = serverUrl
