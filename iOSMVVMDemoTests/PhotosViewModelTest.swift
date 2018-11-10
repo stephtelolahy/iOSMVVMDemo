@@ -1,5 +1,5 @@
 //
-//  PhotoListViewModelTest.swift
+//  PhotosViewModelTest.swift
 //  iOSMVVMDemoTests
 //
 //  Created by Hugues Stéphano TELOLAHY on 8/19/18.
@@ -11,9 +11,9 @@ import RxSwift
 import Cuckoo
 import RxTest
 
-class PhotoListViewModelTest: XCTestCase {
+class PhotosViewModelTest: XCTestCase {
     
-    private var viewModel: PhotoListViewModel!
+    private var viewModel: PhotosViewModel!
     
     private var mockDataManager: MockIDataManager!
     private var photosObserver: TestableObserver<[Photo]>!
@@ -24,7 +24,7 @@ class PhotoListViewModelTest: XCTestCase {
     override func setUp() {
         super.setUp()
         mockDataManager = MockIDataManager()
-        viewModel = PhotoListViewModel(dataManager: mockDataManager)
+        viewModel = PhotosViewModel(dataManager: mockDataManager)
         
         let scheduler = TestScheduler(initialClock: 0)
         photosObserver = scheduler.createObserver([Photo].self)

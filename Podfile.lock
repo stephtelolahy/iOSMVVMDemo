@@ -29,7 +29,7 @@ DEPENDENCIES:
   - RxTest
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Cuckoo
     - Kingfisher
@@ -51,6 +51,6 @@ SPEC CHECKSUMS:
   RxTest: 8da864c0ee47534f586ff18fb0c7e5b2f1fe5023
   URITemplate: ace0c4c46dcf8afe6e89b4060621852886b15c3b
 
-PODFILE CHECKSUM: 105fe22c180707d467b835c2ccde7cfe98be4022
+PODFILE CHECKSUM: c5c8de3016a4a660e88311478c74f62953d77129
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
