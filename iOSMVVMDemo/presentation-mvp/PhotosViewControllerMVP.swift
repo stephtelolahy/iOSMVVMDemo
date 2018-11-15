@@ -46,7 +46,7 @@ extension PhotosViewControllerMVP: PhotosView {
     }
     
     func showError(_ error: Error) {
-        self.showAlert(withMessage: error.localizedDescription)
+        print("An error occurred: \(error.localizedDescription)")
     }
     
     func setLoadingVisible(_ visible: Bool) {

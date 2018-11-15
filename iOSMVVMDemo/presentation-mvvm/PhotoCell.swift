@@ -19,7 +19,7 @@ class PhotoCell: UITableViewCell {
     // MARK: - Setup
     
     func confgure(withPhoto photo: Photo) {
-        descriptionLabel.text = photo.author
-        photoImageView.kf.setImage(with: URL(string: photo.thumbUrl()))
+        descriptionLabel.text = photo.artist
+        photoImageView.kf.setImage(with: URL(string: photo.thumbUrl))
     }
 }

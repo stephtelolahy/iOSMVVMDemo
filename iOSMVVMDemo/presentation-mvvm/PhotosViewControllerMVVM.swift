@@ -34,7 +34,7 @@ class PhotosViewControllerMVVM: UITableViewController {
         }).disposed(by: disposeBag)
         
         viewModel.errorSubject.subscribe(onNext: { error in
-            self.showAlert(withMessage: error.localizedDescription)
+            print("An error occurred: \(error.localizedDescription)")
         }).disposed(by: disposeBag)
     }
     
@@ -53,14 +53,5 @@ class PhotosViewControllerMVVM: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCell", for: indexPath) as! PhotoCell
         cell.confgure(withPhoto: photos[indexPath.row])
         return cell
-    }
-}
-
-extension UIViewController {
-    
-    func showAlert(withMessage message: String ) {
-        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
 }

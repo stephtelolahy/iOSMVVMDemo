@@ -25,22 +25,24 @@
 		AD7EA2ED2128D2890055E14F /* PhotosViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7EA2EC2128D2890055E14F /* PhotosViewModelTest.swift */; };
 		AD7EA2EE2128D29F0055E14F /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotosViewModel.swift */; };
 		AD7EA2F12128D3310055E14F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DEB21285FC200FDB4CD /* Photo.swift */; };
+		ADA81E35219E1E500084CB07 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA81E34219E1E500084CB07 /* Mapper.swift */; };
+		ADA81E37219E21730084CB07 /* PhotoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA81E36219E21730084CB07 /* PhotoDto.swift */; };
+		ADA81E38219E28AE0084CB07 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA81E34219E1E500084CB07 /* Mapper.swift */; };
+		ADA81E39219E292F0084CB07 /* PhotoDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA81E36219E21730084CB07 /* PhotoDto.swift */; };
+		ADA81E3B219E30220084CB07 /* URLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA81E3A219E30220084CB07 /* URLExtension.swift */; };
+		ADA81E3D219E323F0084CB07 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA81E3C219E323F0084CB07 /* ApiError.swift */; };
+		ADA81E3E219E32970084CB07 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA81E3C219E323F0084CB07 /* ApiError.swift */; };
 		ADCBFAE0213C590500F1A991 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = ADCBFADF213C590500F1A991 /* readme.md */; };
-		ADCBFAE2213C5AE400F1A991 /* AlamofireAPIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAE1213C5AE400F1A991 /* AlamofireAPIServiceTest.swift */; };
-		ADCBFAE3213C5B2300F1A991 /* AlamofireAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */; };
-		ADCBFAE6213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */; };
-		ADCBFAE7213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */; };
-		ADCBFAED213C6BD800F1A991 /* PhotoExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAEB213C6BD800F1A991 /* PhotoExtensions.swift */; };
+		ADCBFAE2213C5AE400F1A991 /* NetworkAPIServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADCBFAE1213C5AE400F1A991 /* NetworkAPIServiceTest.swift */; };
+		ADCBFAE3213C5B2300F1A991 /* NetworkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9037213B1C2F00443D6E /* NetworkAPIService.swift */; };
 		ADDF5DF52196E6E500042551 /* PhotosViewControllerMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF5DF42196E6E500042551 /* PhotosViewControllerMVP.swift */; };
 		ADDF5DF72196E7DA00042551 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF5DF62196E7DA00042551 /* PhotosPresenter.swift */; };
 		ADDF5DF82196E7DC00042551 /* PhotosPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF5DF62196E7DA00042551 /* PhotosPresenter.swift */; };
 		ADDF5DFA2196E82B00042551 /* PhotosPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF5DF92196E82B00042551 /* PhotosPresenterTest.swift */; };
-		ADE1253A213B495F004521FA /* DataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE12539213B495F004521FA /* DataManagerTest.swift */; };
 		ADE1253B213B49ED004521FA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6C212870C50027C7B9 /* APIService.swift */; };
-		ADE1253C213B49F9004521FA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
 		ADEF9035213B1A7D00443D6E /* IDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9034213B1A7D00443D6E /* IDataManager.swift */; };
 		ADEF9036213B1B7300443D6E /* IDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9034213B1A7D00443D6E /* IDataManager.swift */; };
-		ADEF9038213B1C3000443D6E /* AlamofireAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */; };
+		ADEF9038213B1C3000443D6E /* NetworkAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEF9037213B1C2F00443D6E /* NetworkAPIService.swift */; };
 		C5123FB26453E15679274D1F /* Pods_iOSMVVMDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */; };
 		DA2656EF4962A92C3F1053EC /* Pods_iOSMVVMDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A25356394C8DEF973281ACA /* Pods_iOSMVVMDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -84,16 +86,17 @@
 		AD6E4C042128506E0073EE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD7239242129DCAB0090154A /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		AD7EA2EC2128D2890055E14F /* PhotosViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModelTest.swift; sourceTree = "<group>"; };
+		ADA81E34219E1E500084CB07 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
+		ADA81E36219E21730084CB07 /* PhotoDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDto.swift; sourceTree = "<group>"; };
+		ADA81E3A219E30220084CB07 /* URLExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
+		ADA81E3C219E323F0084CB07 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		ADCBFADF213C590500F1A991 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		ADCBFAE1213C5AE400F1A991 /* AlamofireAPIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIServiceTest.swift; sourceTree = "<group>"; };
-		ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIJsonDecoder.swift; sourceTree = "<group>"; };
-		ADCBFAEB213C6BD800F1A991 /* PhotoExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoExtensions.swift; sourceTree = "<group>"; };
+		ADCBFAE1213C5AE400F1A991 /* NetworkAPIServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIServiceTest.swift; sourceTree = "<group>"; };
 		ADDF5DF42196E6E500042551 /* PhotosViewControllerMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewControllerMVP.swift; sourceTree = "<group>"; };
 		ADDF5DF62196E7DA00042551 /* PhotosPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenter.swift; sourceTree = "<group>"; };
 		ADDF5DF92196E82B00042551 /* PhotosPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPresenterTest.swift; sourceTree = "<group>"; };
-		ADE12539213B495F004521FA /* DataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTest.swift; sourceTree = "<group>"; };
 		ADEF9034213B1A7D00443D6E /* IDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDataManager.swift; sourceTree = "<group>"; };
-		ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAPIService.swift; sourceTree = "<group>"; };
+		ADEF9037213B1C2F00443D6E /* NetworkAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIService.swift; sourceTree = "<group>"; };
 		BCE3B806FE0E51C361EB1A5F /* Pods-iOSMVVMDemo.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemo.staging.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo.staging.xcconfig"; sourceTree = "<group>"; };
 		E609B8E2C95E71A86EB6C657 /* Pods_iOSMVVMDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSMVVMDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,9 +140,11 @@
 			isa = PBXGroup;
 			children = (
 				AD0BCF6C212870C50027C7B9 /* APIService.swift */,
-				ADEF9037213B1C2F00443D6E /* AlamofireAPIService.swift */,
+				ADEF9037213B1C2F00443D6E /* NetworkAPIService.swift */,
 				AD5A9846213BC79A00D150EE /* LocalAPIService.swift */,
-				ADCBFAE5213C5CA400F1A991 /* APIJsonDecoder.swift */,
+				ADA81E36219E21730084CB07 /* PhotoDto.swift */,
+				ADA81E34219E1E500084CB07 /* Mapper.swift */,
+				ADA81E3C219E323F0084CB07 /* ApiError.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -177,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				AD5A9838213BC4A300D150EE /* XCTestExtensions.swift */,
-				ADCBFAEB213C6BD800F1A991 /* PhotoExtensions.swift */,
+				ADA81E3A219E30220084CB07 /* URLExtension.swift */,
 			);
 			path = misc;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				AD5A9849213BC81000D150EE /* photos.json */,
+				AD6E4BF42128506D0073EE2E /* Assets.xcassets */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -215,14 +221,13 @@
 			isa = PBXGroup;
 			children = (
 				AD426DDE21285D6B00FDB4CD /* application */,
-				AD8777F62196DDC6003D4784 /* presentation-mvvm */,
 				AD8777F72196DDD3003D4784 /* presentation-mvp */,
+				AD8777F62196DDC6003D4784 /* presentation-mvvm */,
 				AD426DE021285DA600FDB4CD /* data */,
+				AD5A9848213BC7E500D150EE /* resources */,
 				AD6E4BF92128506D0073EE2E /* Info.plist */,
 				AD5A983C213BC59B00D150EE /* LaunchScreen.storyboard */,
 				AD5A983E213BC59B00D150EE /* Main.storyboard */,
-				AD6E4BF42128506D0073EE2E /* Assets.xcassets */,
-				AD5A9848213BC7E500D150EE /* resources */,
 			);
 			path = iOSMVVMDemo;
 			sourceTree = "<group>";
@@ -230,10 +235,9 @@
 		AD6E4C012128506E0073EE2E /* iOSMVVMDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				AD7EA2EC2128D2890055E14F /* PhotosViewModelTest.swift */,
 				ADDF5DF92196E82B00042551 /* PhotosPresenterTest.swift */,
-				ADE12539213B495F004521FA /* DataManagerTest.swift */,
-				ADCBFAE1213C5AE400F1A991 /* AlamofireAPIServiceTest.swift */,
+				AD7EA2EC2128D2890055E14F /* PhotosViewModelTest.swift */,
+				ADCBFAE1213C5AE400F1A991 /* NetworkAPIServiceTest.swift */,
 				AD5A9837213BC47500D150EE /* misc */,
 				AD7239242129DCAB0090154A /* GeneratedMocks.swift */,
 				AD6E4C042128506E0073EE2E /* Info.plist */,
@@ -480,15 +484,17 @@
 				AD0BCF6D212870C50027C7B9 /* APIService.swift in Sources */,
 				ADDF5DF52196E6E500042551 /* PhotosViewControllerMVP.swift in Sources */,
 				AD0BCF6A2128662D0027C7B9 /* PhotosViewModel.swift in Sources */,
+				ADA81E35219E1E500084CB07 /* Mapper.swift in Sources */,
 				AD0BCF68212865D20027C7B9 /* PhotoCell.swift in Sources */,
 				ADDF5DF72196E7DA00042551 /* PhotosPresenter.swift in Sources */,
 				ADEF9035213B1A7D00443D6E /* IDataManager.swift in Sources */,
 				AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */,
 				AD5A9847213BC79A00D150EE /* LocalAPIService.swift in Sources */,
+				ADA81E37219E21730084CB07 /* PhotoDto.swift in Sources */,
 				AD6E4BEE2128506D0073EE2E /* AppDelegate.swift in Sources */,
 				AD5A9845213BC70800D150EE /* AppModules.swift in Sources */,
-				ADEF9038213B1C3000443D6E /* AlamofireAPIService.swift in Sources */,
-				ADCBFAE6213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */,
+				ADA81E3D219E323F0084CB07 /* ApiError.swift in Sources */,
+				ADEF9038213B1C3000443D6E /* NetworkAPIService.swift in Sources */,
 				AD426DE921285EC800FDB4CD /* PhotosViewControllerMVVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,20 +504,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADEF9036213B1B7300443D6E /* IDataManager.swift in Sources */,
+				ADA81E3B219E30220084CB07 /* URLExtension.swift in Sources */,
 				AD7EA2ED2128D2890055E14F /* PhotosViewModelTest.swift in Sources */,
-				ADCBFAE7213C5CA400F1A991 /* APIJsonDecoder.swift in Sources */,
-				ADCBFAE3213C5B2300F1A991 /* AlamofireAPIService.swift in Sources */,
-				ADE1253A213B495F004521FA /* DataManagerTest.swift in Sources */,
+				ADCBFAE3213C5B2300F1A991 /* NetworkAPIService.swift in Sources */,
 				ADDF5DF82196E7DC00042551 /* PhotosPresenter.swift in Sources */,
-				ADCBFAED213C6BD800F1A991 /* PhotoExtensions.swift in Sources */,
 				AD7239252129DCAC0090154A /* GeneratedMocks.swift in Sources */,
 				ADDF5DFA2196E82B00042551 /* PhotosPresenterTest.swift in Sources */,
+				ADA81E38219E28AE0084CB07 /* Mapper.swift in Sources */,
+				ADA81E3E219E32970084CB07 /* ApiError.swift in Sources */,
 				AD7EA2EE2128D29F0055E14F /* PhotosViewModel.swift in Sources */,
 				AD5A9839213BC4A300D150EE /* XCTestExtensions.swift in Sources */,
 				ADE1253B213B49ED004521FA /* APIService.swift in Sources */,
-				ADE1253C213B49F9004521FA /* DataManager.swift in Sources */,
 				AD7EA2F12128D3310055E14F /* Photo.swift in Sources */,
-				ADCBFAE2213C5AE400F1A991 /* AlamofireAPIServiceTest.swift in Sources */,
+				ADA81E39219E292F0084CB07 /* PhotoDto.swift in Sources */,
+				ADCBFAE2213C5AE400F1A991 /* NetworkAPIServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

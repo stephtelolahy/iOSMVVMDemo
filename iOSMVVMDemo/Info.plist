@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>SERVER_URL</key>
-	<string>https://picsum.photos</string>
+	<string>https://itunes.apple.com</string>
 	<key>USE_LOCAL_DATASOURCE</key>
 	<string>$(USE_LOCAL_DATASOURCE)</string>
 	<key>CFBundleDevelopmentRegion</key>

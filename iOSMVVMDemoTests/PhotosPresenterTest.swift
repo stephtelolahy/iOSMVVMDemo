@@ -31,7 +31,7 @@ class PhotosPresenterTest: XCTestCase {
     
     func testPhotoLoadedOnViewWillAppearIfDataManagerSucceed() {
         // Given
-        let photos = [Photo.sample()]
+        let photos = [Photo(artist: "a", thumbUrl: "b")]
         Cuckoo.stub(mockDataManager) { mock in
             when(mock.fetchPhotos()).thenReturn(Observable.just(photos))
         }
