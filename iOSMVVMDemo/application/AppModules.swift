@@ -13,12 +13,12 @@ import Foundation
 private let useLocalDataSource: Bool = Bundle.main.infoDictionary?["USE_LOCAL_DATASOURCE"] as? String == "YES"
 
 private func createLocalAPIService() -> APIService {
-    return LocalAPIService(decoder: APIJsonDecoder())
+    return LocalAPIService(mapper: Mapper())
 }
 
 private func createRemoteAPIService() -> APIService {
     let serverUrl: String = Bundle.main.infoDictionary?["SERVER_URL"] as! String
-    return AlamofireAPIService(serverUrl: serverUrl, decoder: APIJsonDecoder())
+    return NetworkAPIService(baseUrl: serverUrl, mapper: Mapper())
 }
 
 private let sharedApiService: APIService = useLocalDataSource ? createLocalAPIService() : createRemoteAPIService()

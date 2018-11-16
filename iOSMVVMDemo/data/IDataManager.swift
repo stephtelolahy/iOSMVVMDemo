@@ -9,5 +9,5 @@
 import RxSwift
 
 protocol IDataManager {
-    func fetchPhotos() -> Observable<[Photo]>
+    func search(text: String) -> Observable<[Photo]>
 }
