@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E5214FA219ECF3A0008B0C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5214F8219ECF3A0008B0C0 /* Main.storyboard */; };
 		AD0BCF68212865D20027C7B9 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF67212865D20027C7B9 /* PhotoCell.swift */; };
 		AD0BCF6A2128662D0027C7B9 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF692128662D0027C7B9 /* PhotosViewModel.swift */; };
 		AD0BCF6D212870C50027C7B9 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0BCF6C212870C50027C7B9 /* APIService.swift */; };
@@ -15,7 +16,6 @@
 		AD426DEE2128608A00FDB4CD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD426DED2128608A00FDB4CD /* DataManager.swift */; };
 		AD5A9839213BC4A300D150EE /* XCTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A9838213BC4A300D150EE /* XCTestExtensions.swift */; };
 		AD5A9840213BC59B00D150EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5A983C213BC59B00D150EE /* LaunchScreen.storyboard */; };
-		AD5A9841213BC59B00D150EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD5A983E213BC59B00D150EE /* Main.storyboard */; };
 		AD5A9845213BC70800D150EE /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A9844213BC70800D150EE /* AppModules.swift */; };
 		AD5A9847213BC79A00D150EE /* LocalAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A9846213BC79A00D150EE /* LocalAPIService.swift */; };
 		AD5A984A213BC81000D150EE /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = AD5A9849213BC81000D150EE /* photos.json */; };
@@ -61,6 +61,7 @@
 		060EDFDA88F46AF5CAB617F4 /* Pods-iOSMVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemo/Pods-iOSMVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
 		1EE28EEAD0DEA7EC2789468C /* Pods-iOSMVVMDemoTests.mock.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemoTests.mock.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemoTests/Pods-iOSMVVMDemoTests.mock.xcconfig"; sourceTree = "<group>"; };
 		41A6E479B63472F351939E6D /* Pods-iOSMVVMDemoTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemoTests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemoTests/Pods-iOSMVVMDemoTests.staging.xcconfig"; sourceTree = "<group>"; };
+		5E5214F9219ECF3A0008B0C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75453BAA89132F67AD560140 /* Pods-iOSMVVMDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemoTests/Pods-iOSMVVMDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89F041AC4A9BEE52D511EE27 /* Pods-iOSMVVMDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSMVVMDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSMVVMDemoTests/Pods-iOSMVVMDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		8A25356394C8DEF973281ACA /* Pods_iOSMVVMDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSMVVMDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +75,6 @@
 		AD426DED2128608A00FDB4CD /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		AD5A9838213BC4A300D150EE /* XCTestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestExtensions.swift; sourceTree = "<group>"; };
 		AD5A983D213BC59B00D150EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AD5A983F213BC59B00D150EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD5A9844213BC70800D150EE /* AppModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModules.swift; sourceTree = "<group>"; };
 		AD5A9846213BC79A00D150EE /* LocalAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPIService.swift; sourceTree = "<group>"; };
 		AD5A9849213BC81000D150EE /* photos.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
@@ -226,8 +226,8 @@
 				AD426DE021285DA600FDB4CD /* data */,
 				AD5A9848213BC7E500D150EE /* resources */,
 				AD6E4BF92128506D0073EE2E /* Info.plist */,
+				5E5214F8219ECF3A0008B0C0 /* Main.storyboard */,
 				AD5A983C213BC59B00D150EE /* LaunchScreen.storyboard */,
-				AD5A983E213BC59B00D150EE /* Main.storyboard */,
 			);
 			path = iOSMVVMDemo;
 			sourceTree = "<group>";
@@ -250,7 +250,6 @@
 			children = (
 				AD426DE821285EC800FDB4CD /* PhotosViewControllerMVVM.swift */,
 				AD0BCF692128662D0027C7B9 /* PhotosViewModel.swift */,
-				AD0BCF67212865D20027C7B9 /* PhotoCell.swift */,
 			);
 			path = "presentation-mvvm";
 			sourceTree = "<group>";
@@ -259,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				ADDF5DF42196E6E500042551 /* PhotosViewControllerMVP.swift */,
+				AD0BCF67212865D20027C7B9 /* PhotoCell.swift */,
 				ADDF5DF62196E7DA00042551 /* PhotosPresenter.swift */,
 			);
 			path = "presentation-mvp";
@@ -354,7 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5A984A213BC81000D150EE /* photos.json in Resources */,
-				AD5A9841213BC59B00D150EE /* Main.storyboard in Resources */,
+				5E5214FA219ECF3A0008B0C0 /* Main.storyboard in Resources */,
 				AD6E4BF52128506D0073EE2E /* Assets.xcassets in Resources */,
 				ADCBFAE0213C590500F1A991 /* readme.md in Resources */,
 				AD5A9840213BC59B00D150EE /* LaunchScreen.storyboard in Resources */,
@@ -532,20 +532,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5E5214F8219ECF3A0008B0C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E5214F9219ECF3A0008B0C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		AD5A983C213BC59B00D150EE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AD5A983D213BC59B00D150EE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		AD5A983E213BC59B00D150EE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD5A983F213BC59B00D150EE /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

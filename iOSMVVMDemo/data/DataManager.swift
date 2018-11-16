@@ -20,8 +20,8 @@ class DataManager: IDataManager {
     
     // MARK: - IDataManager
     
-    func fetchPhotos() -> Observable<[Photo]> {
-        return apiService.fetchPhotos()
+    func search(text: String) -> Observable<[Photo]> {
+        return apiService.search(text: text)
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
     }

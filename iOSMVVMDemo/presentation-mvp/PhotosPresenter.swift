@@ -25,9 +25,9 @@ class PhotosPresenter {
         self.dataManager = dataManager
     }
     
-    func onViewWillAppear() {
+    func onSearch(text: String) {
         view.setLoadingVisible(true)
-        dataManager.fetchPhotos().subscribe(
+        dataManager.search(text: text).subscribe(
             onNext: { photos in
                 self.view.setLoadingVisible(false)
                 self.view.fill(photos: photos)

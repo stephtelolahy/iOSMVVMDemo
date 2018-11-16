@@ -24,8 +24,8 @@ class NetworkAPIService: APIService {
     
     // MARK: - APIService
     
-    func fetchPhotos() -> Observable<[Photo]> {
-        return networkClient.get(PhotoListDto.self, url: "\(baseUrl)/search?term=avengers&entity=movie")
+    func search(text: String) -> Observable<[Photo]> {
+        return networkClient.get(PhotoListDto.self, url: "\(baseUrl)/search?term=\(text)&entity=movie")
             .map { dto -> [Photo] in
                 self.mapper.map(dto: dto)
         }

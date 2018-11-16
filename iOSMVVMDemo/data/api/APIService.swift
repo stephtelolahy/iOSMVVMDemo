@@ -9,5 +9,5 @@
 import RxSwift
 
 protocol APIService {
-    func fetchPhotos() -> Observable<[Photo]>
+    func search(text: String) -> Observable<[Photo]>
 }

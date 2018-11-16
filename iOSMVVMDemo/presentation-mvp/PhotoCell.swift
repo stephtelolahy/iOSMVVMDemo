@@ -11,14 +11,10 @@ import Kingfisher
 
 class PhotoCell: UITableViewCell {
     
-    // MARK: - IBOutlets
+    @IBOutlet private weak var photoImageView: UIImageView!
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
-    @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
-    // MARK: - Setup
-    
-    func confgure(withPhoto photo: Photo) {
+    func confgure(with photo: Photo) {
         descriptionLabel.text = photo.artist
         photoImageView.kf.setImage(with: URL(string: photo.thumbUrl))
     }

@@ -21,9 +21,9 @@ class PhotosViewModel {
         self.dataManager = dataManager
     }
     
-    func onViewWillAppear() {
+    func onSearch(text: String) {
         loadingSubject.onNext(true)
-        dataManager.fetchPhotos().subscribe(
+        dataManager.search(text: text).subscribe(
             onNext: { photos in
                 self.loadingSubject.onNext(false)
                 self.photosSubject.onNext(photos)

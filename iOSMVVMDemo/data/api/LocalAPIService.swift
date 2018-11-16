@@ -21,7 +21,7 @@ class LocalAPIService: APIService {
     
     // MARK: - APIService
     
-    func fetchPhotos() -> Observable<[Photo]> {
+    func search(text: String) -> Observable<[Photo]> {
         return jsonReader.load(PhotoListDto.self, file: "photos").map { dto -> [Photo] in
             self.mapper.map(dto: dto)
         }
