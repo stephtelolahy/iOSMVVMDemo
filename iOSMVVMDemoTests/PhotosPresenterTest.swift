@@ -66,17 +66,4 @@ class PhotosPresenterTest: XCTestCase {
         verify(mockView).showError(errorArgument.capture())
         XCTAssertErrorEqual(errorArgument.value!, error)
     }
-    
-    // TODO: TDD
-//    func testClearResultsWhenSearchTextIsEmpty() {
-//        // When
-//        presenter.onSearch(text: "")
-//
-//        // Then
-//
-//        let photosArgument = ArgumentCaptor<[Photo]>()
-//        verify(mockView).fill(photos: photosArgument.capture())
-//        XCTAssertEqual(photosArgument.value, [])
-//        verifyNoMoreInteractions(mockDataManager)
-//    }
 }

@@ -77,6 +77,7 @@
                                                 <constraint firstItem="JcE-W4-QwU" firstAttribute="centerX" secondItem="Igf-b4-C73" secondAttribute="centerX" id="pOD-Lo-ERf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <connections>
                                             <outlet property="descriptionLabel" destination="Ma7-ZN-J4l" id="fAB-7A-dRr"/>
                                             <outlet property="photoImageView" destination="JcE-W4-QwU" id="lZt-OW-4Ec"/>
@@ -90,7 +91,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="PIG-SK-7Ac" firstAttribute="bottom" secondItem="XwX-Af-HWU" secondAttribute="bottom" id="8ym-V1-8IX"/>
+                            <constraint firstItem="PIG-SK-7Ac" firstAttribute="bottom" secondItem="sCH-eg-w6S" secondAttribute="bottom" id="8ym-V1-8IX"/>
                             <constraint firstItem="3La-nh-X4h" firstAttribute="centerX" secondItem="sCH-eg-w6S" secondAttribute="centerX" id="Hhr-Bj-SnO"/>
                             <constraint firstItem="3La-nh-X4h" firstAttribute="centerY" secondItem="sCH-eg-w6S" secondAttribute="centerY" id="Jv6-Dh-wQ5"/>
                             <constraint firstItem="E8g-54-tTd" firstAttribute="top" secondItem="XwX-Af-HWU" secondAttribute="top" id="KEF-xh-PtO"/>
