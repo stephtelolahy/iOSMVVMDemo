@@ -29,18 +29,18 @@ class PhotosPresenterTest: XCTestCase {
         presenter = PhotosPresenter(view: mockView, dataManager: mockDataManager)
     }
     
-    func testPhotoLoadedOnViewWillAppearIfDataManagerSucceed() {
+    func testSearchSucceed() {
         // Given
-        let photos = [Photo(artist: "a", thumbUrl: "b")]
+        let photos = [Photo(artist: "aa", thumbUrl: "ab")]
         Cuckoo.stub(mockDataManager) { mock in
-            when(mock.fetchPhotos()).thenReturn(Observable.just(photos))
+            when(mock.search(text: "a")).thenReturn(Observable.just(photos))
         }
         
         // When
-        presenter.onViewWillAppear()
+        presenter.onSearch(text: "a")
         
         // Assert
-        verify(mockDataManager).fetchPhotos()
+        verify(mockDataManager).search(text: "a")
         
         let photosArgument = ArgumentCaptor<[Photo]>()
         verify(mockView).fill(photos: photosArgument.capture())
@@ -51,19 +51,32 @@ class PhotosPresenterTest: XCTestCase {
         XCTAssertEqual(boolArgument.allValues, [true, false])
     }
     
-    func testErrorOcurredOnViewWillAppearIfDataManagerFailed() {
+    func testSearchFailed() {
         // Given
         let error = NSError(domain: "Got an error", code: 0)
         Cuckoo.stub(mockDataManager) { mock in
-            when(mock.fetchPhotos()).thenReturn(Observable.error(error))
+            when(mock.search(text: anyString())).thenReturn(Observable.error(error))
         }
         
         // When
-        presenter.onViewWillAppear()
+        presenter.onSearch(text: "b")
         
         // Assert
         let errorArgument = ArgumentCaptor<Error>()
         verify(mockView).showError(errorArgument.capture())
         XCTAssertErrorEqual(errorArgument.value!, error)
     }
+    
+    // TODO: TDD
+//    func testClearResultsWhenSearchTextIsEmpty() {
+//        // When
+//        presenter.onSearch(text: "")
+//
+//        // Then
+//
+//        let photosArgument = ArgumentCaptor<[Photo]>()
+//        verify(mockView).fill(photos: photosArgument.capture())
+//        XCTAssertEqual(photosArgument.value, [])
+//        verifyNoMoreInteractions(mockDataManager)
+//    }
 }

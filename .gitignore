@@ -77,4 +77,4 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-iOSMVVMDemoTests/GeneratedMocks\.swift
+iOSMVVMDemoTests/GeneratedMocks.swift

@@ -25,7 +25,7 @@ class NetworkAPIService: APIService {
     // MARK: - APIService
     
     func search(text: String) -> Observable<[Photo]> {
-        return networkClient.get(PhotoListDto.self, url: "\(baseUrl)/search?term=\(text)&entity=movie")
+        return networkClient.get(PhotoListDto.self, url: "\(baseUrl)/search?term=\(text)")
             .map { dto -> [Photo] in
                 self.mapper.map(dto: dto)
         }
@@ -34,7 +34,7 @@ class NetworkAPIService: APIService {
 
 private extension Alamofire.SessionManager {
     func get<T: Codable>(_ class: T.Type, url: String) -> Observable<T> {
-        return Observable.create{ observer in
+        return Observable.create { observer in
             self.request(url, method: .get)
                 .validate()
                 .responseData(completionHandler: { dataResponse in

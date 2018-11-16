@@ -35,31 +35,31 @@ class PhotosViewModelTest: XCTestCase {
         viewModel.loadingSubject.subscribe(loadingObserver).disposed(by: disposeBag)
     }
     
-    func testPhotoLoadedOnViewWillAppearIfDataManagerSucceed() {
+    func testSearchSucceed() {
         // Given
-        let photos = [Photo(artist: "a", thumbUrl: "b")]
+        let photos = [Photo(artist: "aa", thumbUrl: "ab")]
         Cuckoo.stub(mockDataManager) { mock in
-            when(mock.fetchPhotos()).thenReturn(Observable.just(photos))
+            when(mock.search(text: "a")).thenReturn(Observable.just(photos))
         }
         
         // When
-        viewModel.onViewWillAppear()
+        viewModel.onSearch(text: "a")
         
         // Assert
-        verify(mockDataManager, times(1)).fetchPhotos()
+        verify(mockDataManager, times(1)).search(text: "a")
         XCTAssertEqual([next(0, photos)], photosObserver.events)
         XCTAssertEqual([next(0, true), next(0, false)], loadingObserver.events)
     }
     
-    func testErrorOcurredOnViewWillAppearIfDataManagerFailed() {
+    func testSearchFailed() {
         // Given
         let error = NSError(domain: "Got an error", code: 0)
         Cuckoo.stub(mockDataManager) { mock in
-            when(mock.fetchPhotos()).thenReturn(Observable.error(error))
+            when(mock.search(text: anyString())).thenReturn(Observable.error(error))
         }
         
         // When
-        viewModel.onViewWillAppear()
+        viewModel.onSearch(text: "c")
         
         // Assert
         XCTAssertErrorEqual(error, errorObserver.events[0].value.element!)
