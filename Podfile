@@ -10,6 +10,8 @@ target 'iOSMVVMDemo' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Kingfisher'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
   target 'iOSMVVMDemoTests' do
     inherit! :search_paths
