@@ -16,9 +16,50 @@
 default_platform(:ios)
 
 platform :ios do
+
+  desc "Test app"
+  lane :test do
+
+    scan(
+      scheme: "iOSMVVMDemo-Staging",
+      code_coverage: true
+    )
+
+    say("Test completed")
+
+  end
+
   desc "Build app"
   lane :beta do
-    build_app(scheme: "iOSMVVMDemo-Staging", 
-              workspace: "iOSMVVMDemo.xcworkspace")
+
+    # https://docs.fastlane.tools/actions/clear_derived_data/
+    clear_derived_data
+
+    # get_provisioning_profile
+    # https://docs.fastlane.tools/actions/sigh/
+    sigh(
+      adhoc: true,
+      app_identifier: "com.darty.catalogue.uat",
+      skip_certificate_verification: true
+    )
+
+    # build_ios_app
+    # https://docs.fastlane.tools/actions/gym/
+    gym(
+      clean: true,
+      silent: true,
+      export_method: "ad-hoc",
+      scheme: "iOSMVVMDemo-Release"
+    )
+
+    # Upload a new build to Crashlytics Beta
+    # https://docs.fastlane.tools/actions/crashlytics/
+    crashlytics(
+      crashlytics_path: "./Pods/Crashlytics/submit", # path to your Crashlytics submit binary.
+      api_token: "fc3d2f17775bd74171d9dd46bfc8384cd431e958",
+      build_secret: "dfaf7cdc42e8c1757dc3b58153fa050cea4085aac909ec8b09e2b2ff2521234f"
+    )
+
+    say("Test completed")
   end
 end
