@@ -12,6 +12,7 @@ target 'iOSMVVMDemo' do
   pod 'Kingfisher'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'Firebase/Analytics'
 
   target 'iOSMVVMDemoTests' do
     inherit! :search_paths

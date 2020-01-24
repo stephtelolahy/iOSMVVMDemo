@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: iOSMVVMDemo/data/IDataManager.swift at 2019-07-19 15:53:32 +0000
+// MARK: - Mocks generated from file: iOSMVVMDemo/data/IDataManager.swift at 2020-01-24 12:58:45 +0000
 
 //
 //  IDataManager.swift
@@ -103,7 +103,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: iOSMVVMDemo/data/api/APIService.swift at 2019-07-19 15:53:32 +0000
+// MARK: - Mocks generated from file: iOSMVVMDemo/data/api/APIService.swift at 2020-01-24 12:58:45 +0000
 
 //
 //  APIService.swift
@@ -208,7 +208,7 @@ import RxSwift
 }
 
 
-// MARK: - Mocks generated from file: iOSMVVMDemo/presentation-mvp/PhotosPresenter.swift at 2019-07-19 15:53:32 +0000
+// MARK: - Mocks generated from file: iOSMVVMDemo/presentation-mvp/PhotosPresenter.swift at 2020-01-24 12:58:45 +0000
 
 //
 //  PhotosPresenter.swift

@@ -41,7 +41,7 @@ platform :ios do
     # https://docs.fastlane.tools/actions/sigh/
     sigh(
       adhoc: true,
-      app_identifier: "com.darty.catalogue.uat",
+      app_identifier: "com.creativegames.iOSMVVMDemo",
       skip_certificate_verification: true
     )
 

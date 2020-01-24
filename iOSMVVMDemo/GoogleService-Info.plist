@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>645195786189-9sq9rtn2a51mej9e69bn3gr18b9i9jcl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.645195786189-9sq9rtn2a51mej9e69bn3gr18b9i9jcl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBKD4RhpQSmqcjX-NmwWzLtO5NbYe72r9Q</string>
+	<key>GCM_SENDER_ID</key>
+	<string>645195786189</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.creativegames.iOSMVVMDemo</string>
+	<key>PROJECT_ID</key>
+	<string>iosmvvmdemo-ac7b8</string>
+	<key>STORAGE_BUCKET</key>
+	<string>iosmvvmdemo-ac7b8.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:645195786189:ios:46c8d691f3837b387f0684</string>
+	<key>DATABASE_URL</key>
+	<string>https://iosmvvmdemo-ac7b8.firebaseio.com</string>
+</dict>
+</plist>
